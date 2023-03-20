@@ -47,7 +47,7 @@ public class LoginClient extends Client<LoginRequestMessage> {
     /**
      * Creates a new {@link Client}.
      *
-     * @param channel The client's channel.
+     * @param channel           The client's channel.
      * @param messageRepository The message repository.
      */
     public LoginClient(Channel channel, LunaContext context, GameMessageRepository messageRepository) {
@@ -86,7 +86,7 @@ public class LoginClient extends Client<LoginRequestMessage> {
     /**
      * Determines what the login response should be once the player's data is loaded.
      *
-     * @param data The loaded data.
+     * @param data            The loaded data.
      * @param enteredPassword The entered password.
      */
     public LoginResponse getLoginResponse(PlayerData data, String enteredPassword) {
@@ -104,8 +104,8 @@ public class LoginClient extends Client<LoginRequestMessage> {
     /**
      * Sends the final login response before the player is added to the world.
      *
-     * @param player The player.
-     * @param data The data to sync with the player.
+     * @param player  The player.
+     * @param data    The data to sync with the player.
      * @param message The login request message.
      * @return {@code true} if the final login response {@link LoginResponse#NORMAL}.
      */

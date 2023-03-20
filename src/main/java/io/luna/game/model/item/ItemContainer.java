@@ -153,7 +153,7 @@ public class ItemContainer implements Iterable<Item> {
      * Creates a new {@link ItemContainer}.
      *
      * @param capacity The capacity.
-     * @param policy The stack policy.
+     * @param policy   The stack policy.
      */
     public ItemContainer(int capacity, StackPolicy policy, int primaryRefreshId) {
         this.capacity = capacity;
@@ -201,7 +201,7 @@ public class ItemContainer implements Iterable<Item> {
      * Attempts to add {@code item} on {@code preferredIndex}.
      *
      * @param preferredIndex The preferred index to add the item on.
-     * @param item The item to add.
+     * @param item           The item to add.
      * @return {@code true} if successful.
      */
     public boolean add(int preferredIndex, Item item) {
@@ -293,7 +293,7 @@ public class ItemContainer implements Iterable<Item> {
     /**
      * Attempts to remove {@code removeItems} and add {@code addItems}.
      *
-     * @param addItems The items to add.
+     * @param addItems    The items to add.
      * @param removeItems The items to remove.
      * @return {@code true} if at least one was added or removed.
      */
@@ -346,7 +346,7 @@ public class ItemContainer implements Iterable<Item> {
      * Determines which index {@code item} will be placed on.
      *
      * @param preferredIndex The preferred index.
-     * @param item The item to place.
+     * @param item           The item to place.
      * @return The index, or {@code -1} if no index is available.
      */
     private int computeAddIndex(int preferredIndex, Item item) {
@@ -367,7 +367,7 @@ public class ItemContainer implements Iterable<Item> {
      * Attempts to remove {@code item} from {@code preferredIndex}.
      *
      * @param preferredIndex The preferred index to remove the item from.
-     * @param item The item to remove.
+     * @param item           The item to remove.
      * @return {@code true} if successful.
      */
     public boolean remove(int preferredIndex, Item item) {
@@ -483,7 +483,7 @@ public class ItemContainer implements Iterable<Item> {
      * Determines which index {@code item} will be removed from.
      *
      * @param preferredIndex The preferred index.
-     * @param item The item to remove.
+     * @param item           The item to remove.
      * @return The index, or {@code -1} if no index is available.
      */
     private int computeRemoveIndex(int preferredIndex, Item item) {
@@ -609,8 +609,8 @@ public class ItemContainer implements Iterable<Item> {
     /**
      * Replaces {@code amount} occurrences of {@code oldId} with {@code newId}.
      *
-     * @param oldId The old item identifier.
-     * @param newId The new item identifier.
+     * @param oldId  The old item identifier.
+     * @param newId  The new item identifier.
      * @param amount The amount of occurrences to replace.
      * @return {@code true} if at least one replace occurred.
      */
@@ -922,7 +922,7 @@ public class ItemContainer implements Iterable<Item> {
     /**
      * Swaps the items on {@code firstIndex} and {@code secondIndex}.
      *
-     * @param firstIndex The first index.
+     * @param firstIndex  The first index.
      * @param secondIndex The second index.
      */
     public final void swap(int firstIndex, int secondIndex) {
@@ -961,7 +961,7 @@ public class ItemContainer implements Iterable<Item> {
     /**
      * Swaps the items on {@code firstIndex} and {@code secondIndex}.
      *
-     * @param firstIndex The initial index.
+     * @param firstIndex  The initial index.
      * @param secondIndex The new index.
      */
     private void swapOperation(int firstIndex, int secondIndex) {
@@ -1022,7 +1022,7 @@ public class ItemContainer implements Iterable<Item> {
      * Sets {@code index} to {@code item}.
      *
      * @param index The index to set on.
-     * @param item The item to set.
+     * @param item  The item to set.
      */
     public final void set(int index, Item item) {
         boolean removingItem = item == null;
@@ -1161,7 +1161,7 @@ public class ItemContainer implements Iterable<Item> {
     /**
      * Fires a single or bulk update event.
      *
-     * @param index The index.
+     * @param index   The index.
      * @param oldItem The old item.
      * @param newItem The new item.
      */

@@ -117,6 +117,7 @@ public final class GameObjectList extends EntityList<GameObject> {
 
     /**
      * Returns an iterator over all spawned objects.
+     *
      * @return
      */
     public UnmodifiableIterator<GameObject> dynamicIterator() {

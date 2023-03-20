@@ -49,10 +49,10 @@ public abstract class StationaryEntity extends Entity {
     /**
      * Creates a new local {@link StationaryEntity}.
      *
-     * @param context The context instance.
+     * @param context  The context instance.
      * @param position The position.
-     * @param type The entity type.
-     * @param owner The player to update for. If empty, updates for all players.
+     * @param type     The entity type.
+     * @param owner    The player to update for. If empty, updates for all players.
      */
     public StationaryEntity(LunaContext context, Position position, EntityType type, Optional<Player> owner) {
         super(context, position, type);
@@ -145,7 +145,7 @@ public abstract class StationaryEntity extends Entity {
     /**
      * Sends an update message to {@code player}.
      *
-     * @param player The player.
+     * @param player     The player.
      * @param updateType The update type to apply.
      */
     public void sendUpdateMessage(Player player, UpdateType updateType) {

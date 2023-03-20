@@ -53,7 +53,7 @@ public final class ObjectClickMessageReader extends GameMessageReader {
      * Handle an object click for any index.
      *
      * @param player The player.
-     * @param evt The interaction event.
+     * @param evt    The interaction event.
      */
     private void handleClick(Player player, ObjectClickEvent evt) {
         checkState(evt.getX() >= 0, "x coordinate out of range");

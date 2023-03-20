@@ -60,7 +60,7 @@ public final class DropItemMessageReader extends GameMessageReader {
         int id = item.getId();
         int amount = item.getAmount();
         if (def.isTradeable() && !def.getInventoryActions().contains("Destroy")) {
-            var dropItem = new GroundItem(ctx, id,amount, player.getPosition(), Optional.of(player));
+            var dropItem = new GroundItem(ctx, id, amount, player.getPosition(), Optional.of(player));
             if (ctx.getWorld().getItems().register(dropItem)) {
                 player.getInventory().set(index, null);
             } else {

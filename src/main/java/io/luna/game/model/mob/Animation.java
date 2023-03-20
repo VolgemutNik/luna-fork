@@ -53,8 +53,8 @@ public final class Animation {
     /**
      * Creates a new {@link Animation}.
      *
-     * @param id The identifier.
-     * @param delay The delay.
+     * @param id       The identifier.
+     * @param delay    The delay.
      * @param priority The priority.
      */
     public Animation(int id, int delay, AnimationPriority priority) {
@@ -66,7 +66,7 @@ public final class Animation {
     /**
      * Creates a new {@link Animation} with a delay of {@code 0}.
      *
-     * @param id The identifier.
+     * @param id       The identifier.
      * @param priority The priority.
      */
     public Animation(int id, AnimationPriority priority) {

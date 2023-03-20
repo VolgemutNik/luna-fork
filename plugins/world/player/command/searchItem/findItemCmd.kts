@@ -42,37 +42,37 @@ cmd("finditem", RIGHTS_DEV) {
  * Spawn 1.
  */
 on(WidgetItemFirstClickEvent::class)
-    .filter { widgetId == 5382 && isInterfaceOpen(plr) }
-    .then { spawn(this, 1) }
+        .filter { widgetId == 5382 && isInterfaceOpen(plr) }
+        .then { spawn(this, 1) }
 
 /**
  * Spawn 5.
  */
 on(WidgetItemSecondClickEvent::class)
-    .filter { widgetId == 5382 && isInterfaceOpen(plr) }
-    .then { spawn(this, 5) }
+        .filter { widgetId == 5382 && isInterfaceOpen(plr) }
+        .then { spawn(this, 5) }
 
 /**
  * Spawn 10.
  */
 on(WidgetItemThirdClickEvent::class)
-    .filter { widgetId == 5382 && isInterfaceOpen(plr) }
-    .then { spawn(this, 10) }
+        .filter { widgetId == 5382 && isInterfaceOpen(plr) }
+        .then { spawn(this, 10) }
 
 /**
  * Spawn all.
  */
 on(WidgetItemFourthClickEvent::class)
-    .filter { widgetId == 5382 && isInterfaceOpen(plr) }
-    .then { spawn(this) }
+        .filter { widgetId == 5382 && isInterfaceOpen(plr) }
+        .then { spawn(this) }
 
 /**
  * Spawn (x).
  */
 on(WidgetItemFifthClickEvent::class)
-    .filter { widgetId == 5382 && isInterfaceOpen(plr) }
-    .then {
-        plr.interfaces.open(object : AmountInputInterface() {
-            override fun onAmountInput(player: Player, value: Int) = spawn(this@then, value)
-        })
-    }
+        .filter { widgetId == 5382 && isInterfaceOpen(plr) }
+        .then {
+            plr.interfaces.open(object : AmountInputInterface() {
+                override fun onAmountInput(player: Player, value: Int) = spawn(this@then, value)
+            })
+        }

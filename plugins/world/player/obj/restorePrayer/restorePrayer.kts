@@ -33,6 +33,6 @@ fun restore(plr: Player) {
  * Match all altars with [restore].
  */
 on(ObjectFirstClickEvent::class)
-    .match(altars)
-    .then { restore(plr) }
+        .match(altars)
+        .then { restore(plr) }
 

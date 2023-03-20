@@ -29,7 +29,7 @@ public final class WidgetMobModelMessageWriter extends GameMessageWriter {
      * Creates a new {@link WidgetMobModelMessageWriter} that will display an NPC head model on a widget.
      *
      * @param widgetId The widget identifier.
-     * @param npcId The NPC identifier.
+     * @param npcId    The NPC identifier.
      */
     public WidgetMobModelMessageWriter(int widgetId, int npcId) {
         this.widgetId = widgetId;

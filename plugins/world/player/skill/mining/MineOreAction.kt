@@ -55,6 +55,7 @@ class MineOreAction(plr: Player, val pick: Pickaxe, val ore: Ore, val rockObj: G
             mob.sendMessage("You need a Mining level of ${ore.level} to mine this.")
             false
         }
+
         !Pickaxe.hasPick(mob, pick) -> {
             mob.sendMessage("You need a pickaxe to mine ores.")
             false

@@ -299,7 +299,7 @@ public final class GroundItemList extends EntityList<GroundItem> {
     /**
      * Determines if this tile has space for {@code addAmount} new item models.
      *
-     * @param position The tile.
+     * @param position  The tile.
      * @param addAmount The amount of item models.
      * @return {@code true} if this tile has enough space.
      */

@@ -25,12 +25,12 @@ public final class RuntimeScript {
     /**
      * Creates a new {@link RuntimeScript}.
      *
-     * @param info The runtime information about the script.
+     * @param info   The runtime information about the script.
      * @param script The script template.
      */
     public RuntimeScript(ClassInfo info, ScriptTemplateWithArgs script) {
-      this.info = info;
-      this.script = script;
+        this.info = info;
+        this.script = script;
     }
 
     @Override

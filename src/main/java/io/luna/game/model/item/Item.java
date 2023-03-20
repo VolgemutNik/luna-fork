@@ -28,7 +28,7 @@ public final class Item {
     /**
      * Creates a new {@link Item}.
      *
-     * @param id The identifier.
+     * @param id     The identifier.
      * @param amount The amount.
      */
     public Item(int id, int amount) {
@@ -128,7 +128,7 @@ public final class Item {
         int newAmount = amount + add;
 
         // Handle potential overflows and underflows.
-        if(newAmount < 0) {
+        if (newAmount < 0) {
             newAmount = positive ? Integer.MAX_VALUE : 0;
         }
         return new Item(id, newAmount);

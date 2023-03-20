@@ -38,8 +38,8 @@ public class PlayerClickEvent extends PlayerEvent {
      * Creates a new {@link PlayerClickEvent}.
      *
      * @param player The player.
-     * @param index The index of the other player.
-     * @param other The other player.
+     * @param index  The index of the other player.
+     * @param other  The other player.
      */
     public PlayerClickEvent(Player player, int index, Player other) {
         super(player);

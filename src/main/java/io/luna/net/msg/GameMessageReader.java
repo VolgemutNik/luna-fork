@@ -45,7 +45,7 @@ public abstract class GameMessageReader {
      * value of {@code null} indicates that no event needs to be posted.
      *
      * @param player The player.
-     * @param msg The decoded message.
+     * @param msg    The decoded message.
      * @throws Exception If any errors occur.
      */
     public abstract Event read(Player player, GameMessage msg) throws Exception; // TODO add another method for listeners that don't decode directly into an event
@@ -54,7 +54,7 @@ public abstract class GameMessageReader {
      * Handles a decoded game message and posts its returned {@link Event}.
      *
      * @param player The player.
-     * @param msg The decoded game message.
+     * @param msg    The decoded game message.
      */
     public final void postEvent(Player player, GameMessage msg) {
         try {

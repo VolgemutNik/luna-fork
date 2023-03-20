@@ -69,10 +69,10 @@ class CutTreeAction(plr: Player, val axe: Axe, val tree: Tree, val treeObj: Game
     override fun stop() = mob.animation(Animation.CANCEL)
 
     override fun ignoreIf(other: Action<*>?) =
-        when (other) {
-            is CutTreeAction -> treeObj == other.treeObj
-            else -> false
-        }
+            when (other) {
+                is CutTreeAction -> treeObj == other.treeObj
+                else -> false
+            }
 
     private fun deleteAndRespawnTree() {
         if (world.removeObject(treeObj)) {
@@ -94,7 +94,7 @@ class CutTreeAction(plr: Player, val axe: Axe, val tree: Tree, val treeObj: Game
             val wcLvlFactor = mob.woodcutting.level / 8
             baseTime -= (wcLvlFactor - treeLvlFactor)
         }
-        if(baseTime < 1) {
+        if (baseTime < 1) {
             baseTime = 1
         }
         if (baseTime > BASE_CUT_RATE) {

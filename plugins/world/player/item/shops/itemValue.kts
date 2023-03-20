@@ -18,12 +18,12 @@ fun currentShop(plr: Player): Shop? {
  * Send the item's shop value.
  */
 on(WidgetItemFirstClickEvent::class)
-    .filter { widgetId == 3900 }
-    .then { currentShop(plr)?.sendBuyValue(plr, index) }
+        .filter { widgetId == 3900 }
+        .then { currentShop(plr)?.sendBuyValue(plr, index) }
 
 /**
  * Send the item's sell value.
  */
 on(WidgetItemFirstClickEvent::class)
-    .filter { widgetId == 3823 }
-    .then { currentShop(plr)?.sendSellValue(plr, index) }
+        .filter { widgetId == 3823 }
+        .then { currentShop(plr)?.sendSellValue(plr, index) }

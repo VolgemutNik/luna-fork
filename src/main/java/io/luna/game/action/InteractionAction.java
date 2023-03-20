@@ -19,7 +19,7 @@ public abstract class InteractionAction extends DistancedAction<Player> {
     /**
      * Creates a new {@link InteractionAction}.
      *
-     * @param player The interacting player.
+     * @param player   The interacting player.
      * @param interact The entity to interact with.
      */
     public InteractionAction(Player player, Entity interact) {

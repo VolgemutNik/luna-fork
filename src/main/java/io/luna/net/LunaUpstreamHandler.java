@@ -26,8 +26,8 @@ public final class LunaUpstreamHandler extends ChannelInboundHandlerAdapter {
      * A set of ignored exceptions from Netty.
      */
     private static final Set<String> IGNORED = Set.of(
-        "An existing connection was forcibly closed by the remote host",
-        "An established connection was aborted by the software in your host machine"
+            "An existing connection was forcibly closed by the remote host",
+            "An established connection was aborted by the software in your host machine"
     );
 
     /**

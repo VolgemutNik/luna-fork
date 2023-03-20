@@ -19,9 +19,9 @@ class SellReceiver(private val shop: ShopReceiver, private val noted: Boolean) {
      */
     infix fun String.x(amount: Int) {
         val id = ItemDefinition.ALL
-            .lookup { it.isTradeable && it.name == this && it.isNoted == noted }
-            .map { it.id }
-            .orElseThrow { NoSuchElementException("Item ($this) in shop (${shop.name}) was not valid or found.") }
+                .lookup { it.isTradeable && it.name == this && it.isNoted == noted }
+                .map { it.id }
+                .orElseThrow { NoSuchElementException("Item ($this) in shop (${shop.name}) was not valid or found.") }
         id.x(amount)
     }
 

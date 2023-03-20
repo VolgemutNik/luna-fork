@@ -26,7 +26,7 @@ public final class Tuple<T, U> {
     /**
      * Creates a new {@link Tuple}.
      *
-     * @param first The first element.
+     * @param first  The first element.
      * @param second The second element.
      */
     public Tuple(T first, U second) {

@@ -35,7 +35,7 @@ public class GameClient extends Client<GameMessage> {
     /**
      * Creates a new {@link GameClient}.
      *
-     * @param channel The client's channel.
+     * @param channel    The client's channel.
      * @param repository The message repository.
      */
     public GameClient(Channel channel, GameMessageRepository repository) {
@@ -51,7 +51,7 @@ public class GameClient extends Client<GameMessage> {
     @Override
     void onMessageReceived(GameMessage msg) {
         if (!decodedMessages.offer(msg)) {
-           msg.getPayload().releaseAll();
+            msg.getPayload().releaseAll();
         }
     }
 

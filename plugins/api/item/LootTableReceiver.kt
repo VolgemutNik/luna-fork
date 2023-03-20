@@ -19,7 +19,7 @@ class LootTableReceiver {
      * Creates a set of [LootTableItem]s with [chance].
      */
     fun rarity(chance: Rational, func: RarityReceiver.() -> Unit) =
-        func(RarityReceiver(this, chance, false))
+            func(RarityReceiver(this, chance, false))
 
     /**
      * Create the loot table!

@@ -80,8 +80,8 @@ public final class SqlPlayerSerializer extends PlayerSerializer {
      * Saves a new player to the database.
      *
      * @param connection The connection.
-     * @param username The username.
-     * @param data The player's data.
+     * @param username   The username.
+     * @param data       The player's data.
      * @throws SQLException If any errors occur.
      */
     private void saveNewPlayer(Connection connection, String username, PlayerData data) throws SQLException {
@@ -141,7 +141,7 @@ public final class SqlPlayerSerializer extends PlayerSerializer {
      * Saves an existing player to the database.
      *
      * @param connection The connection.
-     * @param data The player's data.
+     * @param data       The player's data.
      * @throws SQLException If any errors occur.
      */
     private void saveExistingPlayer(Connection connection, PlayerData data) throws SQLException {
@@ -180,8 +180,8 @@ public final class SqlPlayerSerializer extends PlayerSerializer {
     /**
      * Prepares parameters for the SQL statements that loop through skills.
      *
-     * @param index The starting index.
-     * @param skills The skills.
+     * @param index     The starting index.
+     * @param skills    The skills.
      * @param statement The SQL statement instance.
      * @return The new index.
      * @throws SQLException If any errors occur.

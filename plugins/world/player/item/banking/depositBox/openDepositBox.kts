@@ -12,5 +12,5 @@ val depositBoxObjects: Set<Int> = hashSetOf(9398)
  * Open the deposit box.
  */
 on(ObjectFirstClickEvent::class)
-    .match(depositBoxObjects)
-    .then { plr.interfaces.open(DepositBoxInterface()) }
+        .match(depositBoxObjects)
+        .then { plr.interfaces.open(DepositBoxInterface()) }

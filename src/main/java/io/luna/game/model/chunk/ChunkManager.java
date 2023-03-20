@@ -90,8 +90,8 @@ public final class ChunkManager implements Iterable<Chunk> {
      * Returns an update set for {@code type}, potentially sorted by the {@link ChunkMobComparator}.
      *
      * @param player The player.
-     * @param type The entity type.
-     * @param <T> The type.
+     * @param type   The entity type.
+     * @param <T>    The type.
      * @return The update set.
      */
     private <T extends Mob> Set<T> getUpdateMobs(Player player, EntityType type) {
@@ -122,8 +122,8 @@ public final class ChunkManager implements Iterable<Chunk> {
      * Returns a set of viewable entities.
      *
      * @param position The relative position.
-     * @param type The entity type.
-     * @param <T> The type.
+     * @param type     The entity type.
+     * @param <T>      The type.
      * @return The set.
      */
     public <T extends Entity> Set<T> getViewableEntities(Position position, EntityType type) {

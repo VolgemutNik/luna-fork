@@ -28,7 +28,7 @@ public abstract class RepeatingAction<T extends Mob> extends Action<T> {
 
         @Override
         protected void onProcess() {
-           process();
+            process();
         }
 
         @Override
@@ -72,9 +72,9 @@ public abstract class RepeatingAction<T extends Mob> extends Action<T> {
     /**
      * Creates a new {@link RepeatingAction}.
      *
-     * @param mob The mob assigned to this action.
+     * @param mob     The mob assigned to this action.
      * @param instant If this action should execute instantly.
-     * @param delay The initial and/or subsequent delay.
+     * @param delay   The initial and/or subsequent delay.
      */
     public RepeatingAction(T mob, boolean instant, int delay) {
         super(mob);
@@ -84,7 +84,7 @@ public abstract class RepeatingAction<T extends Mob> extends Action<T> {
     /**
      * Creates a new {@link RepeatingAction} that repeats indefinitely at a delay of {@code 1}.
      *
-     * @param mob The mob assigned to this action.
+     * @param mob     The mob assigned to this action.
      * @param instant If this action should execute instantly.
      */
     public RepeatingAction(T mob, boolean instant) {

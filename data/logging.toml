@@ -3,4 +3,4 @@
 rootLevel = "DEBUG"
 formatType = "VERBOSE"
 outputType = "MIXED"
-activeFileLogs = [ "CONSOLE_ERR" ]
+activeFileLogs = ["CONSOLE_ERR"]

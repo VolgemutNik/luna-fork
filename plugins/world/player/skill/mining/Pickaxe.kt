@@ -10,17 +10,17 @@ import io.luna.game.model.mob.Player
  */
 enum class Pickaxe(val level: Int, val itemId: Int, val animation: Animation, val strength: Int) {
     BRONZE(level = 1,
-           itemId = 1265,
-           animation = Animation(625),
-           strength = 1),
+            itemId = 1265,
+            animation = Animation(625),
+            strength = 1),
     IRON(level = 1,
-         itemId = 1267,
-         animation = Animation(626),
-         strength = 2),
+            itemId = 1267,
+            animation = Animation(626),
+            strength = 2),
     STEEL(level = 5,
-          itemId = 1269,
-          animation = Animation(627),
-          strength = 4),
+            itemId = 1269,
+            animation = Animation(627),
+            strength = 4),
     MITHRIL(level = 20,
             itemId = 1273,
             animation = Animation(629),
@@ -30,9 +30,9 @@ enum class Pickaxe(val level: Int, val itemId: Int, val animation: Animation, va
             animation = Animation(628),
             strength = 6),
     RUNE(level = 40,
-         itemId = 1275,
-         animation = Animation(624),
-         strength = 7);
+            itemId = 1275,
+            animation = Animation(624),
+            strength = 7);
 
 
     companion object {
@@ -73,7 +73,7 @@ enum class Pickaxe(val level: Int, val itemId: Int, val animation: Animation, va
          * Does the player have [pick]?
          */
         fun hasPick(plr: Player, pick: Pickaxe) =
-            plr.equipment.nonNullGet(Equipment.WEAPON).map { it.id == pick.itemId }.orElse(false) ||
-                    plr.inventory.contains(pick.itemId)
+                plr.equipment.nonNullGet(Equipment.WEAPON).map { it.id == pick.itemId }.orElse(false) ||
+                        plr.inventory.contains(pick.itemId)
     }
 }

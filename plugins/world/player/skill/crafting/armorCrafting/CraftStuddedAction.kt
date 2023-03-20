@@ -21,13 +21,14 @@ class CraftStuddedAction(val plr: Player, val armor: HideArmor, val removeId: In
     }
 
     override fun executeIf(start: Boolean): Boolean =
-        when {
-            plr.crafting.level < armor.level -> {
-                plr.sendMessage("You need a Crafting level of ${armor.level} to make this.")
-                false
+            when {
+                plr.crafting.level < armor.level -> {
+                    plr.sendMessage("You need a Crafting level of ${armor.level} to make this.")
+                    false
+                }
+
+                else -> true
             }
-            else -> true
-        }
 
     override fun execute() {
         plr.crafting.addExperience(armor.exp)
@@ -38,8 +39,8 @@ class CraftStuddedAction(val plr: Player, val armor: HideArmor, val removeId: In
     override fun add() = listOf(Item(armor.id))
 
     override fun ignoreIf(other: Action<*>?): Boolean =
-        when (other) {
-            is CraftStuddedAction -> armor == other.armor
-            else -> false
-        }
+            when (other) {
+                is CraftStuddedAction -> armor == other.armor
+                else -> false
+            }
 }

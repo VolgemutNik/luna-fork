@@ -43,7 +43,7 @@ public final class RestockPolicy {
      * Creates a new {@link RestockPolicy}.
      *
      * @param stockAmount The amount to be restocked.
-     * @param tickRate The rate in which the restock occurs.
+     * @param tickRate    The rate in which the restock occurs.
      */
     public RestockPolicy(int stockAmount, int tickRate) {
         checkArgument(stockAmount > 0, "Stock amount must be > 0.");

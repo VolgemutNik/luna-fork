@@ -17,9 +17,9 @@ fun punishDuration(msg: CommandEvent): LocalDateTime {
     val minutes = args[1].toLong()
 
     return LocalDateTime.now()
-        .plusMinutes(minutes)
-        .plusHours(hours)
-        .plusDays(days)
+            .plusMinutes(minutes)
+            .plusHours(hours)
+            .plusDays(days)
 }
 
 /**

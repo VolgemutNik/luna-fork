@@ -64,7 +64,7 @@ public final class RestockTask extends Task {
      * Restocks the single {@code item} at {@code index}.
      *
      * @param index The index to restock.
-     * @param item The item to restock.
+     * @param item  The item to restock.
      * @return {@code true} if a restock was performed.
      */
     private boolean restock(int index, Item item) {

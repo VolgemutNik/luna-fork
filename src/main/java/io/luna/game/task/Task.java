@@ -51,7 +51,7 @@ public abstract class Task {
      * Creates a new {@link Task}.
      *
      * @param instant If execution happens instantly.
-     * @param delay The cyclic delay.
+     * @param delay   The cyclic delay.
      */
     public Task(boolean instant, int delay) {
         checkArgument(delay > 0);

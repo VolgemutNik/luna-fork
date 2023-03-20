@@ -36,40 +36,40 @@ fun <T> lazyVal(initializer: () -> T): Lazy<T> = lazy(LazyThreadSafetyMode.NONE,
  * Computes and returns the name for [id].
  */
 fun itemName(id: Int): String = ItemDefinition.ALL[id].map { it.name }
-    .orElseThrow { NoSuchElementException("Name not found for item <$id>") }
+        .orElseThrow { NoSuchElementException("Name not found for item <$id>") }
 
 /**
  * Computes and returns the [ItemDefinition] for [id].
  */
 fun itemDef(id: Int): ItemDefinition = ItemDefinition.ALL.get(id)
-    .orElseThrow { NoSuchElementException("Definition not found for item <$id>") }
+        .orElseThrow { NoSuchElementException("Definition not found for item <$id>") }
 
 /**
  * Computes and returns the [EquipmentDefinition] for [id].
  */
 fun equipDef(id: Int): EquipmentDefinition = EquipmentDefinition.ALL.get(id)
-    .orElseThrow { NoSuchElementException("Definition not found for item <$id>") }
+        .orElseThrow { NoSuchElementException("Definition not found for item <$id>") }
 
 /**
  * Computes and returns the [NpcDefinition] for [id].
  */
 fun npcDef(id: Int): NpcDefinition = NpcDefinition.ALL.get(id)
-    .orElseThrow { NoSuchElementException("Definition not found for npc <$id>") }
+        .orElseThrow { NoSuchElementException("Definition not found for npc <$id>") }
 
 /**
  * Computes and returns the [ObjectDefinition] for [id].
  */
 fun objectDef(id: Int): ObjectDefinition = ObjectDefinition.ALL.get(id)
-    .orElseThrow { NoSuchElementException("Definition not found for object <$id>") }
+        .orElseThrow { NoSuchElementException("Definition not found for object <$id>") }
 
 /**
  * Forwards to [StringUtils.addArticle], returns an empty string if [thing] is null.
  */
 fun addArticle(thing: Any?): String =
-    when (thing) {
-        null -> ""
-        else -> StringUtils.addArticle(thing)
-    }
+        when (thing) {
+            null -> ""
+            else -> StringUtils.addArticle(thing)
+        }
 
 /**
  * Returns the current [ThreadLocalRandom].
@@ -100,19 +100,20 @@ fun <R, C, V> emptyTable(size: Int = 16): Table<R, C, V> = HashBasedTable.create
  * Creates an immutable table of [entries]. The syntax for creating entries is (row [to] column [to] value).
  */
 fun <R, C, V> immutableTableOf(vararg entries: TableEntry<R, C, V>): Table<R, C, V> =
-    when (entries.size) {
-        0 -> ImmutableTable.of()
-        1 -> {
-            val entry = entries[0]
-            val key = entry.first
-            ImmutableTable.of(key.first, key.second, entry.second)
-        }
-        else -> {
-            val table = ImmutableTable.builder<R, C, V>()
-            for (entry in entries) {
+        when (entries.size) {
+            0 -> ImmutableTable.of()
+            1 -> {
+                val entry = entries[0]
                 val key = entry.first
-                table.put(key.first, key.second, entry.second)
+                ImmutableTable.of(key.first, key.second, entry.second)
             }
-            table.build()
+
+            else -> {
+                val table = ImmutableTable.builder<R, C, V>()
+                for (entry in entries) {
+                    val key = entry.first
+                    table.put(key.first, key.second, entry.second)
+                }
+                table.build()
+            }
         }
-    }

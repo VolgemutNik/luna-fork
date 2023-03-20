@@ -23,8 +23,8 @@ val messages = listOf(
  */
 fun sendMessages() {
     world.players.stream()
-        .filter { it.rights < RIGHTS_ADMIN }
-        .forEach { it.sendMessage(messages.random()) }
+            .filter { it.rights < RIGHTS_ADMIN }
+            .forEach { it.sendMessage(messages.random()) }
 }
 
 /**

@@ -12,7 +12,7 @@ on(ItemOnItemEvent::class) {
     if (battlestaff != null) {
         plr.interfaces.open(object : MakeItemDialogueInterface(battlestaff.staff) {
             override fun makeItem(player: Player?, id: Int, index: Int, forAmount: Int) =
-                plr.submitAction(MakeBattlestaffAction(plr, battlestaff, forAmount))
+                    plr.submitAction(MakeBattlestaffAction(plr, battlestaff, forAmount))
         })
     }
 }

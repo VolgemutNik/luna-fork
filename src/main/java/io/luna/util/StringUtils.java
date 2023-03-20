@@ -24,34 +24,34 @@ public final class StringUtils {
     /**
      * An array containing valid {@code char}s.
      */
-    public static final char[] VALID_CHARACTERS = new char[] {
-        '_', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
-        'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q',
-        'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
-        '0', '1', '2', '3', '4', '5', '6', '7', '8',
-        '9', '!', '@', '#', '$', '%', '^', '&', '*',
-        '(', ')', '-', '+', '=', ':', ';', '.', '>',
-        '<', ',', '"', '[', ']', '|', '?', '/', '`'
+    public static final char[] VALID_CHARACTERS = new char[]{
+            '_', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
+            'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q',
+            'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+            '0', '1', '2', '3', '4', '5', '6', '7', '8',
+            '9', '!', '@', '#', '$', '%', '^', '&', '*',
+            '(', ')', '-', '+', '=', ':', ';', '.', '>',
+            '<', ',', '"', '[', ']', '|', '?', '/', '`'
     };
 
     /**
      * The character table that will aid in unpacking text.
      */
     private static final char[] CHAR_TABLE = new char[]{
-        ' ', 'e', 't', 'a', 'o', 'i', 'h', 'n', 's', 'r',
-        'd', 'l', 'u', 'm', 'w', 'c', 'y', 'f', 'g', 'p',
-        'b', 'v', 'k', 'x', 'j', 'q', 'z', '0', '1', '2',
-        '3', '4', '5', '6', '7', '8', '9', ' ', '!', '?',
-        '.', ',', ':', ';', '(', ')', '-', '&', '*', '\\',
-        '\'', '@', '#', '+', '=', '\243', '$', '%', '"', '[', ']'
+            ' ', 'e', 't', 'a', 'o', 'i', 'h', 'n', 's', 'r',
+            'd', 'l', 'u', 'm', 'w', 'c', 'y', 'f', 'g', 'p',
+            'b', 'v', 'k', 'x', 'j', 'q', 'z', '0', '1', '2',
+            '3', '4', '5', '6', '7', '8', '9', ' ', '!', '?',
+            '.', ',', ':', ';', '(', ')', '-', '&', '*', '\\',
+            '\'', '@', '#', '+', '=', '\243', '$', '%', '"', '[', ']'
     };
-    
+
     /**
      * A private constructor to discourage external instantiation.
      */
     private StringUtils() {
     }
-    
+
     /**
      * Unpacks text received from the client.
      *
@@ -163,7 +163,7 @@ public final class StringUtils {
         if (s.isEmpty()) {
             return s;
         }
-        
+
         StringBuilder builder = new StringBuilder(s);
         builder.setCharAt(0, Character.toUpperCase(s.charAt(0)));
         return builder.toString();

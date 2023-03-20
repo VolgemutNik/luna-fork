@@ -12,9 +12,9 @@ public abstract class ConditionalAction<T extends Mob> extends RepeatingAction<T
     /**
      * Creates a new {@link ConditionalAction}.
      *
-     * @param mob The mob.
+     * @param mob     The mob.
      * @param instant If it should execute instantly.
-     * @param delay The condition check delay.
+     * @param delay   The condition check delay.
      */
     public ConditionalAction(T mob, boolean instant, int delay) {
         super(mob, instant, delay);

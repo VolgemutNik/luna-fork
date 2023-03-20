@@ -33,11 +33,11 @@ public final class ItemOnObjectEvent extends PlayerEvent {
     /**
      * Creates a new {@link ItemOnObjectEvent}.
      *
-     * @param player The player.
-     * @param itemId The item identifier.
-     * @param itemIndex The item index.
+     * @param player          The player.
+     * @param itemId          The item identifier.
+     * @param itemIndex       The item index.
      * @param itemInterfaceId The item interface identifier.
-     * @param gameObject The object.
+     * @param gameObject      The object.
      */
     public ItemOnObjectEvent(Player player, int itemId, int itemIndex, int itemInterfaceId, GameObject gameObject) {
         super(player);

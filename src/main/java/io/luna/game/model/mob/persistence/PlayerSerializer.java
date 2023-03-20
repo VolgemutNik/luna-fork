@@ -20,7 +20,7 @@ public abstract class PlayerSerializer {
      * Saves {@link PlayerData} to an external data source.
      *
      * @param username The username of the player to save
-     * @param data The data to save.
+     * @param data     The data to save.
      * @throws Exception If any errors occur.
      */
     public abstract void save(String username, PlayerData data) throws Exception;

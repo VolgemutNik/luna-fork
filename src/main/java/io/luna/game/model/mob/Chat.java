@@ -26,7 +26,7 @@ public final class Chat {
      * Creates a new {@link Chat}.
      *
      * @param message The message.
-     * @param color The message color.
+     * @param color   The message color.
      * @param effects The message effects.
      */
     public Chat(byte[] message, int color, int effects) {

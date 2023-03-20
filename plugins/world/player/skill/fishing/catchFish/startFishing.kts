@@ -18,12 +18,12 @@ fun fish(msg: NpcClickEvent, tool: Tool) {
  * First click fishing spots.
  */
 on(NpcFirstClickEvent::class)
-    .match(233, 234, 235, 236)
-    .then { fish(this, Tool.FISHING_ROD) }
+        .match(233, 234, 235, 236)
+        .then { fish(this, Tool.FISHING_ROD) }
 
 on(NpcFirstClickEvent::class)
-    .match(309, 310, 311, 314, 315, 317, 318)
-    .then { fish(this, Tool.FLY_FISHING_ROD) }
+        .match(309, 310, 311, 314, 315, 317, 318)
+        .then { fish(this, Tool.FLY_FISHING_ROD) }
 
 npc1(312) {
     fish(this, Tool.LOBSTER_POT)
@@ -34,8 +34,8 @@ npc1(313) {
 }
 
 on(NpcFirstClickEvent::class)
-    .match(316, 319)
-    .then { fish(this, Tool.SMALL_NET) }
+        .match(316, 319)
+        .then { fish(this, Tool.SMALL_NET) }
 
 npc1(1174) {
     fish(this, Tool.MONKFISH_NET)
@@ -45,8 +45,8 @@ npc1(1174) {
  * Second click fishing spots.
  */
 on(NpcSecondClickEvent::class)
-    .match(309, 316, 319, 310, 311, 314, 315, 317, 318)
-    .then { fish(this, Tool.FISHING_ROD) }
+        .match(309, 316, 319, 310, 311, 314, 315, 317, 318)
+        .then { fish(this, Tool.FISHING_ROD) }
 
 npc2(312) {
     fish(this, Tool.HARPOON)

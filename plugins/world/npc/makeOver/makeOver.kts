@@ -11,7 +11,7 @@ npc1(599) {
     plr.newDialogue()
             .npc(npc.id, "Would you like to change your appearance?")
             .options(
-                    "Yes", {plr.interfaces.open(PlayerAppearance.DesignPlayerInterface()) },
+                    "Yes", { plr.interfaces.open(PlayerAppearance.DesignPlayerInterface()) },
                     "No", {}).open()
 }
 
@@ -20,6 +20,6 @@ npc1(599) {
  */
 on(ServerLaunchEvent::class) {
     world.addNpc(id = 599,
-                 x = 3092,
-                 y = 3250)
+            x = 3092,
+            y = 3250)
 }

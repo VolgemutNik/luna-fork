@@ -60,7 +60,7 @@ public final class RegionChangedMessageReader extends GameMessageReader {
                     player.queue(new ClearChunkMessageWriter(chunkPos));
                     while (objectIterator.hasNext()) {
                         GameObject object = objectIterator.next();
-                        if(object.isDynamic()) {
+                        if (object.isDynamic()) {
                             showEntity(player, object);
                         }
                     }

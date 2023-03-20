@@ -26,7 +26,7 @@ public final class GiveItemDialogueInterface extends DialogueInterface {
     /**
      * Creates a new {@link GiveItemDialogueInterface}.
      *
-     * @param item The item to give.
+     * @param item        The item to give.
      * @param displayText The text to display when giving the item.
      */
     public GiveItemDialogueInterface(Item item, String displayText) {

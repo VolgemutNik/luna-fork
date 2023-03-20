@@ -13,13 +13,14 @@ class MakeBattlestaffAction(val plr: Player, val battlestaff: Battlestaff, amoun
         InventoryAction(plr, true, 2, amount) {
 
     override fun executeIf(start: Boolean): Boolean =
-        when {
-            mob.crafting.level < battlestaff.level -> {
-                plr.sendMessage("You need a Crafting level of ${battlestaff.level} to make this.")
-                false
+            when {
+                mob.crafting.level < battlestaff.level -> {
+                    plr.sendMessage("You need a Crafting level of ${battlestaff.level} to make this.")
+                    false
+                }
+
+                else -> true
             }
-            else -> true
-        }
 
     override fun execute() {
         mob.crafting.addExperience(battlestaff.exp)
@@ -29,8 +30,8 @@ class MakeBattlestaffAction(val plr: Player, val battlestaff: Battlestaff, amoun
     override fun remove() = listOf(battlestaff.orbItem, BATTLESTAFF_ITEM)
 
     override fun ignoreIf(other: Action<*>?): Boolean =
-        when (other) {
-            is MakeBattlestaffAction -> battlestaff == other.battlestaff
-            else -> false
-        }
+            when (other) {
+                is MakeBattlestaffAction -> battlestaff == other.battlestaff
+                else -> false
+            }
 }

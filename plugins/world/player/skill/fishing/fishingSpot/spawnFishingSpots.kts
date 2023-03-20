@@ -13,13 +13,13 @@ val fishingSpots: List<FishingSpot> = listOf()
  */
 fun moveSpots() {
     fishingSpots.stream()
-        .filter { it.countdown() }
-        .forEach {
-            when (it.position) {
-                it.home -> it.teleport(it.away)
-                it.away -> it.teleport(it.home)
+            .filter { it.countdown() }
+            .forEach {
+                when (it.position) {
+                    it.home -> it.teleport(it.away)
+                    it.away -> it.teleport(it.home)
+                }
             }
-        }
 }
 
 /**

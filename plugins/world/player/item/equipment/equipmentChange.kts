@@ -29,5 +29,5 @@ on(EquipItemEvent::class) { equip(plr, index) }
  * Listen for unequip events.
  */
 on(WidgetItemFirstClickEvent::class)
-    .filter { widgetId == 1688 }
-    .then { unequip(plr, index) }
+        .filter { widgetId == 1688 }
+        .then { unequip(plr, index) }

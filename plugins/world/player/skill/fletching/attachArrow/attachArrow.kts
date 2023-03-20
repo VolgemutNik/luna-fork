@@ -13,7 +13,7 @@ fun openInterface(msg: ItemOnItemEvent, arrow: Arrow?) {
         val interfaces = msg.plr.interfaces
         interfaces.open(object : MakeItemDialogueInterface(arrow.id) {
             override fun makeItem(plr: Player, id: Int, index: Int, forAmount: Int) =
-                plr.submitAction(MakeArrowAction(plr, arrow, forAmount))
+                    plr.submitAction(MakeArrowAction(plr, arrow, forAmount))
         })
     }
 }
@@ -33,6 +33,6 @@ on(ItemOnItemEvent::class) {
  */
 Arrow.HEADLESS_ARROW.apply {
     on(ItemOnItemEvent::class)
-        .filter { matches(tip, with) }
-        .then { openInterface(this, this@apply) }
+            .filter { matches(tip, with) }
+            .then { openInterface(this, this@apply) }
 }

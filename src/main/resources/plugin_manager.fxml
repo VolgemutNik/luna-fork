@@ -20,38 +20,41 @@
             <menus>
                 <Menu mnemonicParsing="false" text="File">
                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#onSave" text="Save" />
-                        <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem mnemonicParsing="false" onAction="#onImport" text="Import..." />
-                        <MenuItem mnemonicParsing="false" onAction="#onExport" text="Export..." />
-                        <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" onAction="#onSelectAll" text="Select all" />
-                  <MenuItem mnemonicParsing="false" onAction="#onDeselectAll" text="Deselect All" />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-                  <CheckMenuItem fx:id="retainSelection" mnemonicParsing="false" onAction="#onRetainSelection" text="Retain selection..." />
-                  <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#onSave" text="Save"/>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                        <MenuItem mnemonicParsing="false" onAction="#onImport" text="Import..."/>
+                        <MenuItem mnemonicParsing="false" onAction="#onExport" text="Export..."/>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                        <MenuItem mnemonicParsing="false" onAction="#onSelectAll" text="Select all"/>
+                        <MenuItem mnemonicParsing="false" onAction="#onDeselectAll" text="Deselect All"/>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                        <CheckMenuItem fx:id="retainSelection" mnemonicParsing="false" onAction="#onRetainSelection"
+                                       text="Retain selection..."/>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
                         <CheckMenuItem fx:id="flattenPackages" mnemonicParsing="false" onAction="#onFlattenPackages"
                                        text="Flatten packages"/>
                         <SeparatorMenuItem mnemonicParsing="false"/>
-                  <CheckMenuItem fx:id="saveOnExit" mnemonicParsing="false" onAction="#onSaveOnExit" text="Save on exit" />
-                        <SeparatorMenuItem mnemonicParsing="false" />
-                        <CheckMenuItem fx:id="darkTheme" mnemonicParsing="false" onAction="#onDarkTheme" text="Dark theme" />
-                        <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem mnemonicParsing="false" onAction="#onExit" text="Exit" />
+                        <CheckMenuItem fx:id="saveOnExit" mnemonicParsing="false" onAction="#onSaveOnExit"
+                                       text="Save on exit"/>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                        <CheckMenuItem fx:id="darkTheme" mnemonicParsing="false" onAction="#onDarkTheme"
+                                       text="Dark theme"/>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                        <MenuItem mnemonicParsing="false" onAction="#onExit" text="Exit"/>
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="About">
                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#onInfo" text="Info" />
-                        <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem mnemonicParsing="false" onAction="#onGithubPage" text="Github page..." />
-                        <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem mnemonicParsing="false" onAction="#onLicense" text="License" />
+                        <MenuItem mnemonicParsing="false" onAction="#onInfo" text="Info"/>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                        <MenuItem mnemonicParsing="false" onAction="#onGithubPage" text="Github page..."/>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                        <MenuItem mnemonicParsing="false" onAction="#onLicense" text="License"/>
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">
                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#onReportABug" text="Report a bug..." />
+                        <MenuItem mnemonicParsing="false" onAction="#onReportABug" text="Report a bug..."/>
                     </items>
                 </Menu>
             </menus>
@@ -72,13 +75,13 @@
                 <Label alignment="CENTER" layoutX="101.0" layoutY="14.0" prefHeight="40.0" prefWidth="186.0"
                        text="Plugin Viewer">
                     <font>
-                        <Font size="14.0" />
+                        <Font size="14.0"/>
                     </font>
                 </Label>
                 <Label alignment="CENTER" layoutX="602.0" layoutY="14.0" prefHeight="40.0" prefWidth="210.0"
                        text="Plugin Metadata" textAlignment="CENTER">
                     <font>
-                        <Font size="14.0" />
+                        <Font size="14.0"/>
                     </font>
                 </Label>
                 <Button layoutX="602.0" layoutY="535.0" mnemonicParsing="false" onAction="#onFinished" prefHeight="50.0"

@@ -34,7 +34,7 @@ public final class ShopInterface extends InventoryOverlayInterface {
      * Creates a new {@link ShopInterface}.
      *
      * @param world The world.
-     * @param name The shop name.
+     * @param name  The shop name.
      */
     public ShopInterface(World world, String name) {
         this(world.getShops().get(name));

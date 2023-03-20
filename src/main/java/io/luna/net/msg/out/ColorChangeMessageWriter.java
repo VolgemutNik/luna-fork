@@ -28,7 +28,7 @@ public final class ColorChangeMessageWriter extends GameMessageWriter {
     /**
      * Creates a new {@link ColorChangeMessageWriter}.
      *
-     * @param id The identifier for the text to change the color of.
+     * @param id    The identifier for the text to change the color of.
      * @param color The new color to change it to.
      */
     public ColorChangeMessageWriter(int id, int color) {

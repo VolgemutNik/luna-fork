@@ -35,7 +35,7 @@ public final class DialogueQueueBuilder {
     /**
      * Creates a new {@link DialogueQueueBuilder}.
      *
-     * @param player The player.
+     * @param player      The player.
      * @param initialSize The initial size of the internal queue.
      */
     public DialogueQueueBuilder(Player player, int initialSize) {

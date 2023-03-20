@@ -25,7 +25,7 @@ public final class RemoveGroundItemMessageWriter extends GameMessageWriter {
     /**
      * Creates a new {@link RemoveGroundItemMessageWriter}.
      *
-     * @param id The item identifier.
+     * @param id     The item identifier.
      * @param offset The offset.
      */
     public RemoveGroundItemMessageWriter(int id, int offset) {

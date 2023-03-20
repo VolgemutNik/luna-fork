@@ -37,29 +37,32 @@ class LightLogAction(plr: Player, var delayTicks: Int, val log: Log) : Condition
     private var animationDelay: Int = 0
 
     override fun start() =
-        when {
-            occupied(0, 0) -> {
-                mob.sendMessage("You cannot light a fire here.")
-                false
-            }
-            mob.firemaking.level < log.level -> {
-                mob.sendMessage("You need a Firemaking level of ${log.level} to light this.")
-                false
-            }
-            !mob.inventory.contains(TINDERBOX_ID) -> {
-                mob.sendMessage("You need a tinderbox to light this.")
-                false
-            }
-            else -> {
-                if (mob.inventory.remove(log.id)) {
-                    world.addItem(log.id, 1, mob.position, mob)
-                    mob.sendMessage("You light the ${itemName(log.id).toLowerCase()}...")
-                    true
-                } else {
+            when {
+                occupied(0, 0) -> {
+                    mob.sendMessage("You cannot light a fire here.")
                     false
                 }
+
+                mob.firemaking.level < log.level -> {
+                    mob.sendMessage("You need a Firemaking level of ${log.level} to light this.")
+                    false
+                }
+
+                !mob.inventory.contains(TINDERBOX_ID) -> {
+                    mob.sendMessage("You need a tinderbox to light this.")
+                    false
+                }
+
+                else -> {
+                    if (mob.inventory.remove(log.id)) {
+                        world.addItem(log.id, 1, mob.position, mob)
+                        mob.sendMessage("You light the ${itemName(log.id).toLowerCase()}...")
+                        true
+                    } else {
+                        false
+                    }
+                }
             }
-        }
 
     override fun condition(): Boolean {
         if (occupied(0, 0)) {
@@ -75,10 +78,10 @@ class LightLogAction(plr: Player, var delayTicks: Int, val log: Log) : Condition
     override fun stop() = mob.animation(Animation.CANCEL)
 
     override fun ignoreIf(other: Action<*>?) =
-        when (other) {
-            is LightLogAction -> log.id == other.log.id
-            else -> false
-        }
+            when (other) {
+                is LightLogAction -> log.id == other.log.id
+                else -> false
+            }
 
     /**
      * Ensure the light animation only plays once every 1.8s, otherwise it stutters.

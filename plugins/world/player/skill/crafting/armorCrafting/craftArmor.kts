@@ -15,6 +15,7 @@ fun craftArmor(plr: Player, hide: Hide) {
             // Soft leather, because it uses a different interface.
             plr.interfaces.open(SoftLeatherInterface())
         }
+
         else -> {
             // All other hides.
             val ids = HideArmor.HIDE_TO_ARMOR[hide]!!
@@ -29,10 +30,10 @@ fun craftArmor(plr: Player, hide: Hide) {
 
 // Handle all armor crafting.
 on(ItemOnItemEvent::class)
-    .filter { matches(CraftArmorAction.NEEDLE_ID) }
-    .then {
-        val result = lookup(Hide.TAN_TO_HIDE)
-        if (result != null) {
-            craftArmor(plr, result)
+        .filter { matches(CraftArmorAction.NEEDLE_ID) }
+        .then {
+            val result = lookup(Hide.TAN_TO_HIDE)
+            if (result != null) {
+                craftArmor(plr, result)
+            }
         }
-    }

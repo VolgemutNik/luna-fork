@@ -5,7 +5,7 @@ import api.bootstrap.plugin
 plugin {
     name = "Mining"
     description =
-        """
+            """
         A plugin that enables the Mining skill. This includes
         -> Prospecting rocks
         -> Mining rocks with depletion and respawning

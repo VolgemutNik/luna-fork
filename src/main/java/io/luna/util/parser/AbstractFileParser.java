@@ -112,7 +112,7 @@ public abstract class AbstractFileParser<P, T, R> implements Runnable {
 
             while (hasNext(parser)) {
                 R tokenObj = convert(parse(parser));
-                if(tokenObj != null) {
+                if (tokenObj != null) {
                     tokenObjects.add(tokenObj);
                     currentIndex++;
                 }

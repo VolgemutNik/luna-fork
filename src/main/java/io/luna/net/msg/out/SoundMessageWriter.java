@@ -29,7 +29,7 @@ public final class SoundMessageWriter extends GameMessageWriter {
     /**
      * Creates a new {@link SoundMessageWriter}.
      *
-     * @param id The sound identifier.
+     * @param id    The sound identifier.
      * @param loops How many times the sound should loop (?).
      * @param delay The amount of client ticks before the sound should play.
      */

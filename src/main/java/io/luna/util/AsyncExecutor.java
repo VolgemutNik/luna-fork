@@ -48,7 +48,7 @@ public final class AsyncExecutor implements Executor {
     /**
      * Creates a new {@link AsyncExecutor}.
      *
-     * @param threadCount The thread pool worker count.
+     * @param threadCount   The thread pool worker count.
      * @param threadFactory The thread factory to create workers with.
      */
     public AsyncExecutor(int threadCount, ThreadFactory threadFactory) {
@@ -64,7 +64,7 @@ public final class AsyncExecutor implements Executor {
      * Creates a new {@link AsyncExecutor} using a named thread factory.
      *
      * @param threadCount The thread pool worker count.
-     * @param threadName The name of worker threads.
+     * @param threadName  The name of worker threads.
      */
     public AsyncExecutor(int threadCount, String threadName) {
         this(threadCount, new ThreadFactoryBuilder().setNameFormat(threadName).build());
@@ -97,7 +97,7 @@ public final class AsyncExecutor implements Executor {
     public void await(boolean terminate) throws ExecutionException {
         checkState(isRunning(), "Backing thread pool has already been terminated.");
 
-        for (;;) {
+        for (; ; ) {
             Future<?> pending = pendingTasks.poll();
 
             if (pending == null) {

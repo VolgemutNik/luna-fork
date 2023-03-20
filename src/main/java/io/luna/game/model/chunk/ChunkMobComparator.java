@@ -29,11 +29,11 @@ public final class ChunkMobComparator implements Comparator<Mob> {
      * An immutable list of factors used to compare mobs.
      */
     private final ImmutableList<ComparableFactor> factors = ImmutableList.of(
-        this::comparePosition,
-        this::compareFriends,
-        this::compareSize,
-        this::compareCombatLevel,
-        this::compareCombat
+            this::comparePosition,
+            this::compareFriends,
+            this::compareSize,
+            this::compareCombatLevel,
+            this::compareCombat
     );
 
     /**
@@ -74,7 +74,7 @@ public final class ChunkMobComparator implements Comparator<Mob> {
     /**
      * Compare mob combat levels. Awards {@code 2} weight.
      *
-     * @param left The left mob.
+     * @param left  The left mob.
      * @param right The right mob.
      * @return The factor values and weight for each mob.
      */
@@ -87,7 +87,7 @@ public final class ChunkMobComparator implements Comparator<Mob> {
     /**
      * Compare mob sizes. Awards {@code 3} weight.
      *
-     * @param left The left mob.
+     * @param left  The left mob.
      * @param right The right mob.
      * @return The factor values and weight for each mob.
      */
@@ -100,7 +100,7 @@ public final class ChunkMobComparator implements Comparator<Mob> {
     /**
      * Compare mob positions. Awards {@code 3} weight.
      *
-     * @param left The left mob.
+     * @param left  The left mob.
      * @param right The right mob.
      * @return The factor values and weight for each mob.
      */
@@ -113,7 +113,7 @@ public final class ChunkMobComparator implements Comparator<Mob> {
     /**
      * Compares Player friends' lists. Awards {@code 4} weight.
      *
-     * @param left The left mob.
+     * @param left  The left mob.
      * @param right The right mob.
      * @return The factor values and weight for each mob.
      */
@@ -140,7 +140,7 @@ public final class ChunkMobComparator implements Comparator<Mob> {
     /**
      * Compare mob combat states. Awards {@code 5} weight.
      *
-     * @param left The left mob.
+     * @param left  The left mob.
      * @param right The right mob.
      * @return The factor values and weight for each mob.
      */
@@ -153,8 +153,8 @@ public final class ChunkMobComparator implements Comparator<Mob> {
     /**
      * Compares the factor values and awards weight based on a which one is greater.
      *
-     * @param left The left factor value.
-     * @param right The right factor value.
+     * @param left   The left factor value.
+     * @param right  The right factor value.
      * @param weight The amount of weight to award.
      * @return The factor values and weight for each mob.
      */

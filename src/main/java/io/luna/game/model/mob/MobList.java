@@ -122,7 +122,7 @@ public final class MobList<E extends Mob> implements Iterable<E> {
 
         // Initialize the index cache.
         this.indexes = IntStream.rangeClosed(1, capacity).boxed()
-            .collect(Collectors.toCollection(() -> new ArrayDeque<>(capacity)));
+                .collect(Collectors.toCollection(() -> new ArrayDeque<>(capacity)));
     }
 
     @Override
@@ -230,7 +230,7 @@ public final class MobList<E extends Mob> implements Iterable<E> {
             mob.setState(EntityState.INACTIVE);
         } else if (mob.getType() == EntityType.PLAYER) {
             checkState(mob.asPlr().getState() == EntityState.INACTIVE,
-                "Player must be inactive. Do not use MobList#remove(Mob) to logout players.");
+                    "Player must be inactive. Do not use MobList#remove(Mob) to logout players.");
             world.removePlayer(mob.asPlr());
         }
 

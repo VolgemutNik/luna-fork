@@ -38,8 +38,8 @@ public final class ForcedMovement {
     /**
      * Creates a new {@link ForcedMovement} for movement across the x-axis.
      *
-     * @param player The player.
-     * @param amount The amount to move.
+     * @param player   The player.
+     * @param amount   The amount to move.
      * @param duration The duration.
      * @return The forced movement instance.
      */
@@ -53,8 +53,8 @@ public final class ForcedMovement {
     /**
      * Creates a new {@link ForcedMovement} for movement across the y-axis.
      *
-     * @param player The player.
-     * @param amount The amount to move.
+     * @param player   The player.
+     * @param amount   The amount to move.
      * @param duration The duration.
      * @return The forced movement instance.
      */
@@ -69,13 +69,13 @@ public final class ForcedMovement {
      * Creates a new {@link ForcedMovement}.
      *
      * @param startPosition The starting position.
-     * @param endPosition The destination position.
-     * @param durationX The movement duration along the x-axis.
-     * @param durationY The movement duration along the y-axis.
-     * @param direction The movement direction.
+     * @param endPosition   The destination position.
+     * @param durationX     The movement duration along the x-axis.
+     * @param durationY     The movement duration along the y-axis.
+     * @param direction     The movement direction.
      */
     public ForcedMovement(Position startPosition, Position endPosition, int durationX, int durationY,
-        Direction direction) {
+                          Direction direction) {
         this.startPosition = startPosition;
         this.endPosition = endPosition;
         this.durationX = durationX;

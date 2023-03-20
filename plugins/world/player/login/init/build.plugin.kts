@@ -5,7 +5,7 @@ import api.bootstrap.plugin
 plugin {
     name = "Initialize player"
     description =
-        """
+            """
         A plugin that prepares players for gameplay. This includes
         -> Sending login messages
         -> Loads gameframe tabs

@@ -22,7 +22,6 @@ import java.util.Set;
  *
  * @author lare96 <http://github.com/lare96>
  * @author natis1 <http://github.com/natis1>
- *
  */
 public final class Shop {
 
@@ -89,7 +88,7 @@ public final class Shop {
      * no greater than the amount of items purchased minus 1, may occur because it doesn't calculate each item bought
      * individually. This means that 2 items sold for 0.7 coins each will yield 1 coin, instead of the 0 coins you
      * would get in vanilla behavior.
-     *
+     * <p>
      * This behavior can be changed, resulting in a much less efficient price calculating formula, but which ultimately
      * is slightly more authentic (but perhaps less desirable) to the original game.
      */
@@ -149,10 +148,10 @@ public final class Shop {
     /**
      * Creates a new {@link Shop}.
      *
-     * @param name The shop name.
+     * @param name          The shop name.
      * @param restockPolicy The restock policy.
-     * @param buyPolicy The sell policy.
-     * @param currency The currency used to buy items.
+     * @param buyPolicy     The sell policy.
+     * @param currency      The currency used to buy items.
      */
     public Shop(World world, String name, RestockPolicy restockPolicy, BuyPolicy buyPolicy, Currency currency) {
         this.world = world;
@@ -169,7 +168,7 @@ public final class Shop {
      * Sends the sell value of the inventory item on {@code index} to the Player.
      *
      * @param player The player.
-     * @param index The index of the item.
+     * @param index  The index of the item.
      */
     public void sendSellValue(Player player, int index) {
         Item item = player.getInventory().get(index);
@@ -188,7 +187,7 @@ public final class Shop {
      * Sends the buy value of the shop item on {@code index} to the Player.
      *
      * @param player The player.
-     * @param index The index of the item.
+     * @param index  The index of the item.
      */
     public void sendBuyValue(Player player, int index) {
         Item item = container.get(index);
@@ -206,8 +205,8 @@ public final class Shop {
     /**
      * Buy an item from this shop.
      *
-     * @param player The player.
-     * @param index The item's index.
+     * @param player    The player.
+     * @param index     The item's index.
      * @param buyAmount The amount to buy.
      * @return {@code true} if the item was bought.
      */
@@ -274,8 +273,8 @@ public final class Shop {
     /**
      * Sell an item to this shop.
      *
-     * @param player The player.
-     * @param index The item's index.
+     * @param player     The player.
+     * @param index      The item's index.
      * @param sellAmount The amount to sell.
      * @return {@code true} if the item was sold.
      */
@@ -320,14 +319,14 @@ public final class Shop {
 
     /**
      * Computes the buy value of {@code item}.
-     *
+     * <p>
      * This is based on extensive black-box testing of modern OSRS's shops, and assuming that none of the code for shop prices
      * has changed since RS2. The principal difference between this function and most private servers is that this one
      * accounts for the different shop formulas used with items that the store normally stocks
      * (for example: selling a staff to Zaff, or a security book to a general store).
      *
-     * @param item The item.
-     * @param index The index of the item in the shop.
+     * @param item         The item.
+     * @param index        The index of the item in the shop.
      * @param amountBought The amount of the item to be purchased.
      * @return The buy value.
      */
@@ -383,7 +382,7 @@ public final class Shop {
 
         // First, find the number of items purchased at the maximum possible price.
         // We check if any items are bought at maximum price
-        int maxPriceItems = ( (expectedAmount - amountStocked + amountBought) * priceChange >= (maxPrice - 1.0))
+        int maxPriceItems = ((expectedAmount - amountStocked + amountBought) * priceChange >= (maxPrice - 1.0))
                 // and then set the number bought at that price
                 ? (expectedAmount - itemsToReachMaxPrice - amountStocked + amountBought) : 0;
         // This formula above only applies if you are not at the max price from the start. if you are, then all
@@ -439,17 +438,17 @@ public final class Shop {
 
     /**
      * Computes the sell value of {@code item}.
-     *
+     * <p>
      * This is based on extensive black-box testing of modern OSRS's shops, and assuming that none of the code for
      * shop sell prices has changed too much.
-     *
+     * <p>
      * In general stores sell values scale with every item sold, starting at 40% of base value,
      * and decreasing by 3% for every item that the shop already has.
-     *
+     * <p>
      * In specialty stores. Sell values start at 55% of base value, and decrease by 2% for every item the shop
      * has overstocked.
      *
-     * @param item The item.
+     * @param item       The item.
      * @param amountSold The amount of item sold to the shop.
      * @return The sell value.
      */
@@ -481,7 +480,7 @@ public final class Shop {
         double valueMod = amountSold * startingPrice;
 
         // First, find the number of items sold at the maximum possible price.
-        int maxPriceItems = ( (expectedAmount - amountStocked) * priceChange >= (maxPrice - startingPrice))
+        int maxPriceItems = ((expectedAmount - amountStocked) * priceChange >= (maxPrice - startingPrice))
                 // and then set the number sold at that price
                 ? (expectedAmount - itemsToReachMaxPrice - amountStocked) : 0;
         if (maxPriceItems > amountSold) {
@@ -520,7 +519,7 @@ public final class Shop {
             double startingPriceMod = (expectedAmount - amountStocked - startingIndex) * priceChange;
             double endingPriceMod = (expectedAmount - amountStocked - endingIndex) * priceChange;
             double netPriceMod = (endingPriceMod + startingPriceMod);
-            valueMod += netPriceMod * (double)(netIndex / 2) + (netIndex % 2 * 0.5 * netPriceMod);
+            valueMod += netPriceMod * (double) (netIndex / 2) + (netIndex % 2 * 0.5 * netPriceMod);
             totalMoney = (int) (value * valueMod);
         }
         return totalMoney;

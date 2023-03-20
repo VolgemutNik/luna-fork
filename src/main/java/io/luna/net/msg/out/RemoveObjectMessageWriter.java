@@ -30,9 +30,9 @@ public final class RemoveObjectMessageWriter extends GameMessageWriter {
     /**
      * Creates a new {@link RemoveObjectMessageWriter}.
      *
-     * @param type The object type.
+     * @param type      The object type.
      * @param direction The object orientation.
-     * @param offset The offset.
+     * @param offset    The offset.
      */
     public RemoveObjectMessageWriter(int type, int direction, int offset) {
         this.type = type;

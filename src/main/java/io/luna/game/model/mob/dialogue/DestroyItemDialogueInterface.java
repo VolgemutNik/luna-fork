@@ -30,7 +30,7 @@ public final class DestroyItemDialogueInterface extends DialogueInterface {
     /**
      * Creates a new {@link DestroyItemDialogueInterface}.
      *
-     * @param index The inventory index.
+     * @param index  The inventory index.
      * @param itemId The item identifier.
      */
     public DestroyItemDialogueInterface(int index, int itemId) {

@@ -21,7 +21,7 @@ object Attr {
 
     init {
         val builder = GsonBuilder().disableHtmlEscaping().disableInnerClassSerialization().setPrettyPrinting()
-            .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
+                .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
 
         // Register type adapters.
         builder.registerTypeAdapter(TickTimer::class.java, TickTimerTypeAdapter)

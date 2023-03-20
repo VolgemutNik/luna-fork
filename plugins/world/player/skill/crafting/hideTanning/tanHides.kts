@@ -19,6 +19,7 @@ data class TanButton(val hide: Hide, val amount: TanAmount) {
             TanAmount.TAN_X -> plr.interfaces.open(object : AmountInputInterface() {
                 override fun onAmountInput(player: Player?, value: Int) = action(value)
             })
+
             TanAmount.TAN_ALL -> action(plr.inventory.computeAmountForId(hide.hide))
         }
     }
@@ -89,19 +90,19 @@ on(ServerLaunchEvent::class) {
 
 // Tanning button actions (1, 5, 10, X).
 on(ButtonClickEvent::class)
-    .filter { plr.interfaces.isOpen(TanInterface::class) }
-    .then {
-        val tan = buttonToTan[id]
-        tan?.forAmount(plr) { tan(plr, tan.hide, it) }
-    }
+        .filter { plr.interfaces.isOpen(TanInterface::class) }
+        .then {
+            val tan = buttonToTan[id]
+            tan?.forAmount(plr) { tan(plr, tan.hide, it) }
+        }
 
 // "Talk" option for tanner NPC.
 npc1(804) {
     plr.newDialogue()
-        .npc(npc.id, "Would you like me to tan some hides?")
-        .options("Yes", { open(it) },
-                 "No", { it.interfaces.close() })
-        .open()
+            .npc(npc.id, "Would you like me to tan some hides?")
+            .options("Yes", { open(it) },
+                    "No", { it.interfaces.close() })
+            .open()
 }
 
 // "Trade" option for tanner NPC.

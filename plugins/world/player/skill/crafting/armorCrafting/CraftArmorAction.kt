@@ -39,17 +39,19 @@ class CraftArmorAction(private val plr: Player,
     private var Player.threadLeft by Attr.int()
 
     override fun executeIf(start: Boolean) =
-        when {
-            plr.crafting.level < armor.level -> {
-                plr.sendMessage("You need a Crafting level of ${armor.level} to make this.")
-                false
+            when {
+                plr.crafting.level < armor.level -> {
+                    plr.sendMessage("You need a Crafting level of ${armor.level} to make this.")
+                    false
+                }
+
+                !plr.inventory.containsAll(NEEDLE_ID, THREAD_ID) -> {
+                    plr.sendMessage("You need a needle and thread in order to craft armor.")
+                    false
+                }
+
+                else -> true
             }
-            !plr.inventory.containsAll(NEEDLE_ID, THREAD_ID) -> {
-                plr.sendMessage("You need a needle and thread in order to craft armor.")
-                false
-            }
-            else -> true
-        }
 
     override fun execute() {
         mob.animation(ANIM)
@@ -72,8 +74,8 @@ class CraftArmorAction(private val plr: Player,
     }
 
     override fun ignoreIf(other: Action<*>?) =
-        when (other) {
-            is CraftArmorAction -> armor == other.armor
-            else -> false
-        }
+            when (other) {
+                is CraftArmorAction -> armor == other.armor
+                else -> false
+            }
 }

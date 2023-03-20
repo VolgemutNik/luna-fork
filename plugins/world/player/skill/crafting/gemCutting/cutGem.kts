@@ -12,7 +12,7 @@ on(ItemOnItemEvent::class) {
     if (gem != null) {
         plr.interfaces.open(object : MakeItemDialogueInterface(gem.cut) {
             override fun makeItem(player: Player?, id: Int, index: Int, forAmount: Int) =
-                plr.submitAction(CutGemAction(plr, gem, forAmount))
+                    plr.submitAction(CutGemAction(plr, gem, forAmount))
         })
     }
 }

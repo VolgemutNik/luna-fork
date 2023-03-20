@@ -62,7 +62,7 @@ public final class ChunkRepository {
      * the argued type or a {@link ClassCastException} will be thrown.
      *
      * @param type The type of entities to get.
-     * @param <E> The type to cast to. Must be a subclass of Entity.
+     * @param <E>  The type to cast to. Must be a subclass of Entity.
      * @return A set of entities casted to {@code <E>}. As long as {@code <E>} matches {@code type}, no errors will
      * be thrown.
      */

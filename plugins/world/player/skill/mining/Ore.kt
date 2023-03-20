@@ -102,16 +102,16 @@ enum class Ore(val rocks: List<Pair<Int, Int>>,
         /**
          * Ore rock object ID -> Ore instance.
          */
-        val ROCK_MAP = values().flatMap { ore -> ore.rocks.map { it.first to ore} }.toMap()
+        val ROCK_MAP = values().flatMap { ore -> ore.rocks.map { it.first to ore } }.toMap()
 
         /**
          * All empty rock object IDs.
          */
-        val EMPTY_ROCKS: Set<Int> =  values().flatMap { ore -> ore.rocks.map { it.second } }.toHashSet()
+        val EMPTY_ROCKS: Set<Int> = values().flatMap { ore -> ore.rocks.map { it.second } }.toHashSet()
 
         /**
          * Ore rock object ID -> Empty rock object ID.
          */
-        val ORE_TO_EMPTY: Map<Int, Int> =  values().flatMap {  ore -> ore.rocks.map { it.first to it.second } }.toMap()
+        val ORE_TO_EMPTY: Map<Int, Int> = values().flatMap { ore -> ore.rocks.map { it.first to it.second } }.toMap()
     }
 }

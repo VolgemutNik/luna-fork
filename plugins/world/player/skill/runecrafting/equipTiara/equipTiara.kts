@@ -1,4 +1,3 @@
-
 package world.player.skill.runecrafting.equipTiara
 
 import api.predef.*
@@ -34,6 +33,6 @@ on(LoginEvent::class) { loginUpdate(plr) }
  * Forward to [equipmentUpdate] if the changed equipment was in the head slot.
  */
 on(EquipmentChangeEvent::class)
-    .filter { index == Equipment.HEAD }
-    .then { equipmentUpdate(plr, newItem) }
+        .filter { index == Equipment.HEAD }
+        .then { equipmentUpdate(plr, newItem) }
 

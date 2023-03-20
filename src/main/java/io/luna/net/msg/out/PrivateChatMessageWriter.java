@@ -25,7 +25,7 @@ public final class PrivateChatMessageWriter extends GameMessageWriter {
     /**
      * Creates a new {@link PrivateChatMessageWriter}.
      *
-     * @param name The receiver of the message.
+     * @param name    The receiver of the message.
      * @param message The message to send.
      */
     public PrivateChatMessageWriter(long name, byte[] message) {

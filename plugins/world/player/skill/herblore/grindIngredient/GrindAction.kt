@@ -22,10 +22,10 @@ class GrindAction(plr: Player,
     }
 
     override fun executeIf(start: Boolean) =
-        when {
-            !mob.inventory.contains(Ingredient.PESTLE_AND_MORTAR) -> false
-            else -> true
-        }
+            when {
+                !mob.inventory.contains(Ingredient.PESTLE_AND_MORTAR) -> false
+                else -> true
+            }
 
 
     override fun execute() {
@@ -42,8 +42,8 @@ class GrindAction(plr: Player,
     override fun add() = listOf(ingredient.newItem)
 
     override fun ignoreIf(other: Action<*>) =
-        when (other) {
-            is GrindAction -> ingredient == other.ingredient
-            else -> false
-        }
+            when (other) {
+                is GrindAction -> ingredient == other.ingredient
+                else -> false
+            }
 }

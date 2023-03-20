@@ -89,7 +89,7 @@ public final class LoginDecoder extends ProgressiveMessageDecoder<LoginDecoder.D
     /**
      * Creates a new {@link LoginDecoder}.
      *
-     * @param context The context instance.
+     * @param context    The context instance.
      * @param repository The message repository.
      */
     public LoginDecoder(LunaContext context, GameMessageRepository repository) {
@@ -133,7 +133,7 @@ public final class LoginDecoder extends ProgressiveMessageDecoder<LoginDecoder.D
      * Decodes the handshake.
      *
      * @param ctx The channel handler context.
-     * @param in The buffer to read data from.
+     * @param in  The buffer to read data from.
      */
     private void decodeHandshake(ChannelHandlerContext ctx, ByteBuf in) {
         if (in.readableBytes() >= 2) {
@@ -161,7 +161,7 @@ public final class LoginDecoder extends ProgressiveMessageDecoder<LoginDecoder.D
      * Decodes the login type and RSA block size.
      *
      * @param ctx The channel handler context.
-     * @param in The buffer to read data from.
+     * @param in  The buffer to read data from.
      */
     private void decodeLoginType(ChannelHandlerContext ctx, ByteBuf in) {
         if (in.readableBytes() >= 2) {
@@ -179,7 +179,7 @@ public final class LoginDecoder extends ProgressiveMessageDecoder<LoginDecoder.D
      * Decodes the RSA block.
      *
      * @param ctx The channel handler context.
-     * @param in The buffer to read data from.
+     * @param in  The buffer to read data from.
      * @return The decoded login response message.
      */
     private Object decodeRsaBlock(ChannelHandlerContext ctx, ByteBuf in) {

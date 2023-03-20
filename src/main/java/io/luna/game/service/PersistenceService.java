@@ -75,7 +75,7 @@ public final class PersistenceService extends AbstractIdleService {
      * if the player is logged in.
      *
      * @param username The username of the player.
-     * @param action The action to apply.
+     * @param action   The action to apply.
      * @return The future, describing the result of the task.
      */
     public ListenableFuture<Void> transform(String username, Consumer<PlayerData> action) {
@@ -144,7 +144,7 @@ public final class PersistenceService extends AbstractIdleService {
      * by the {@link LogoutService}.
      *
      * @param username The player's username.
-     * @param data The data to save.
+     * @param data     The data to save.
      * @return A listenable future describing the result of the save.
      */
     public ListenableFuture<Void> save(String username, PlayerData data) {

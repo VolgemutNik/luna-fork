@@ -14,7 +14,7 @@ fun makeUnf(msg: ItemOnItemEvent, herb: Int) {
     if (unfPotion != null) {
         plr.interfaces.open(object : MakeItemDialogueInterface(unfPotion.id) {
             override fun makeItem(player: Player, id: Int, index: Int, forAmount: Int) =
-                plr.submitAction(MakeUnfAction(plr, unfPotion, forAmount))
+                    plr.submitAction(MakeUnfAction(plr, unfPotion, forAmount))
         })
     }
 }

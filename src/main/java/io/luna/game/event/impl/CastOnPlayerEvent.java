@@ -14,7 +14,7 @@ public class CastOnPlayerEvent extends PlayerEvent {
      * The spell identifier.
      */
     private final int spellId;
-    
+
     /**
      * The spell target.
      */

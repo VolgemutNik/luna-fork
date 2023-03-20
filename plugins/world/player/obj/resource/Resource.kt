@@ -61,8 +61,8 @@ abstract class Resource {
             if (obj != null && matches(obj)) {
                 // Dynamically cached, so we don't have to worry about 'matches' performance.
                 on(ItemOnObjectEvent::class)
-                    .filter { objectId == obj.id }
-                    .then { fill(plr, itemId, objectId, this) }
+                        .filter { objectId == obj.id }
+                        .then { fill(plr, itemId, objectId, this) }
                 onMatch(obj)
             }
         }

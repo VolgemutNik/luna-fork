@@ -53,8 +53,8 @@ public final class PlayerInteraction {
     /**
      * Creates a new {@link PlayerInteraction}.
      *
-     * @param index The index.
-     * @param name The name.
+     * @param index  The index.
+     * @param name   The name.
      * @param pinned If this should be the topmost interaction.
      */
     public PlayerInteraction(int index, String name, boolean pinned) {

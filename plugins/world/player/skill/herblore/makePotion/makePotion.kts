@@ -11,7 +11,7 @@ import io.luna.game.model.mob.dialogue.MakeItemDialogueInterface
 fun makePotion(plr: Player, potion: Potion) {
     plr.interfaces.open(object : MakeItemDialogueInterface(potion.id) {
         override fun makeItem(plr: Player, id: Int, index: Int, forAmount: Int) =
-            plr.submitAction(MakePotionAction(plr, potion, forAmount))
+                plr.submitAction(MakePotionAction(plr, potion, forAmount))
     })
 }
 

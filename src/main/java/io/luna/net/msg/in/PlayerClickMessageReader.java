@@ -30,7 +30,7 @@ public final class PlayerClickMessageReader extends GameMessageReader {
      * The fourth interaction index.
      *
      * @param player The player.
-     * @param msg The buffer.
+     * @param msg    The buffer.
      * @return The event to post.
      */
     private Event fourthIndex(Player player, ByteMessage msg) {

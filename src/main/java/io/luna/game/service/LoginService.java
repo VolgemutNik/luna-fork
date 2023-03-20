@@ -56,8 +56,8 @@ public final class LoginService extends AuthenticationService<LoginRequest> {
         /**
          * Creates a new {@link LoginRequest}.
          *
-         * @param player The player.
-         * @param client The player's client.
+         * @param player  The player.
+         * @param client  The player's client.
          * @param message The login request message.
          */
         public LoginRequest(Player player, LoginClient client, LoginRequestMessage message) {

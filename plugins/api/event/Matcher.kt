@@ -64,23 +64,23 @@ abstract class Matcher<E : Event, K>(private val eventType: KClass<E>) {
         init {
             // Map all matchers to their matching event types.
             ALL = listOf(CommandMatcher,
-                         ButtonMatcher,
-                         ItemOnItemMatcher,
-                         ItemOnObjectMatcher,
-                         NpcMatcher(NpcFirstClickEvent::class),
-                         NpcMatcher(NpcSecondClickEvent::class),
-                         NpcMatcher(NpcThirdClickEvent::class),
-                         NpcMatcher(NpcFourthClickEvent::class),
-                         NpcMatcher(NpcFifthClickEvent::class),
-                         ItemMatcher(ItemFirstClickEvent::class),
-                         ItemMatcher(ItemSecondClickEvent::class),
-                         ItemMatcher(ItemThirdClickEvent::class),
-                         ItemMatcher(ItemFourthClickEvent::class),
-                         ItemMatcher(ItemFifthClickEvent::class),
-                         ObjectMatcher(ObjectFirstClickEvent::class),
-                         ObjectMatcher(ObjectSecondClickEvent::class),
-                         ObjectMatcher(ObjectThirdClickEvent::class))
-                .associateBy { it.eventType }
+                    ButtonMatcher,
+                    ItemOnItemMatcher,
+                    ItemOnObjectMatcher,
+                    NpcMatcher(NpcFirstClickEvent::class),
+                    NpcMatcher(NpcSecondClickEvent::class),
+                    NpcMatcher(NpcThirdClickEvent::class),
+                    NpcMatcher(NpcFourthClickEvent::class),
+                    NpcMatcher(NpcFifthClickEvent::class),
+                    ItemMatcher(ItemFirstClickEvent::class),
+                    ItemMatcher(ItemSecondClickEvent::class),
+                    ItemMatcher(ItemThirdClickEvent::class),
+                    ItemMatcher(ItemFourthClickEvent::class),
+                    ItemMatcher(ItemFifthClickEvent::class),
+                    ObjectMatcher(ObjectFirstClickEvent::class),
+                    ObjectMatcher(ObjectSecondClickEvent::class),
+                    ObjectMatcher(ObjectThirdClickEvent::class))
+                    .associateBy { it.eventType }
 
             // Add all of the matcher's listeners.
             ALL.values.forEach { it.addListener() }
@@ -95,7 +95,7 @@ abstract class Matcher<E : Event, K>(private val eventType: KClass<E>) {
                     multiCount += result.second
                 }
                 logger.debug("Action map optimization | singular: {} mappings, multi: {} mappings.",
-                             singularCount, multiCount)
+                        singularCount, multiCount)
             }
         }
     }

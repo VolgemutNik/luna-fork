@@ -45,7 +45,7 @@ public final class PlayerPersistence {
      * Synchronously saves persistent data.
      *
      * @param username The username of the player to save.
-     * @param data The data to save.
+     * @param data     The data to save.
      */
     public void save(String username, PlayerData data) throws Exception {
         if (data.needsHash) {

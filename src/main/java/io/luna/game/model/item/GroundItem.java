@@ -44,9 +44,9 @@ public class GroundItem extends StationaryEntity {
     /**
      * Creates a new {@link GroundItem}.
      *
-     * @param context The context instance.
-     * @param id The item identifier.
-     * @param amount The item amount.
+     * @param context  The context instance.
+     * @param id       The item identifier.
+     * @param amount   The item amount.
      * @param position The position of the item.
      */
     public GroundItem(LunaContext context, int id, int amount, Position position, Optional<Player> player) {

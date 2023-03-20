@@ -179,16 +179,16 @@ public final class ModelAnimation {
     /**
      * Creates a new {@link ModelAnimation}.
      *
-     * @param standingId The standing animation.
-     * @param standingTurnId The standing and turning animation.
-     * @param walkingId The walking animation.
-     * @param turning180DegreesId The 180 degree turning animation.
-     * @param turning90DegreesCwId The 90 degree clockwise turning animation.
+     * @param standingId            The standing animation.
+     * @param standingTurnId        The standing and turning animation.
+     * @param walkingId             The walking animation.
+     * @param turning180DegreesId   The 180 degree turning animation.
+     * @param turning90DegreesCwId  The 90 degree clockwise turning animation.
      * @param turning90DegreesCcwId The 90 degree counterclockwise turning animation.
-     * @param runningId The running animation.
+     * @param runningId             The running animation.
      */
     private ModelAnimation(int standingId, int standingTurnId, int walkingId, int turning180DegreesId,
-                          int turning90DegreesCwId, int turning90DegreesCcwId, int runningId) {
+                           int turning90DegreesCwId, int turning90DegreesCcwId, int runningId) {
         this.standingId = standingId;
         this.standingTurnId = standingTurnId;
         this.walkingId = walkingId;

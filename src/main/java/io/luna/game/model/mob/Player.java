@@ -315,7 +315,7 @@ public final class Player extends Mob {
     /**
      * Creates a new {@link Player}.
      *
-     * @param context The context instance.
+     * @param context     The context instance.
      * @param credentials The credentials.
      */
     public Player(LunaContext context, PlayerCredentials credentials) {
@@ -504,7 +504,7 @@ public final class Player extends Mob {
      * can boost performance when invoked repetitively.
      *
      * @param msg The message to send.
-     * @param id The widget identifier.
+     * @param id  The widget identifier.
      */
     public void sendText(Object msg, int id) {
         // Retrieve the text that's already on the interface.

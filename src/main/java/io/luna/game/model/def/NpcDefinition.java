@@ -67,15 +67,15 @@ public final class NpcDefinition implements Definition {
     /**
      * Creates a new {@link NpcDefinition}.
      *
-     * @param id The identifier.
-     * @param name The name.
-     * @param examine The examine text.
-     * @param size The size.
-     * @param walkAnimation The walking animation.
-     * @param walkBackAnimation The walking-back animation.
-     * @param walkLeftAnimation The walking-left animation.
+     * @param id                 The identifier.
+     * @param name               The name.
+     * @param examine            The examine text.
+     * @param size               The size.
+     * @param walkAnimation      The walking animation.
+     * @param walkBackAnimation  The walking-back animation.
+     * @param walkLeftAnimation  The walking-left animation.
      * @param walkRightAnimation The walking-right animation.
-     * @param actions A list of actions.
+     * @param actions            A list of actions.
      */
     public NpcDefinition(int id, String name, String examine, int size, int walkAnimation, int walkBackAnimation,
                          int walkLeftAnimation, int walkRightAnimation, String[] actions) {
@@ -94,7 +94,7 @@ public final class NpcDefinition implements Definition {
     /**
      * Determines if the NPC action at {@code index} is equal to {@code action}.
      *
-     * @param index The action index.
+     * @param index  The action index.
      * @param action The action to compare.
      * @return {@code true} if the actions are equal.
      */

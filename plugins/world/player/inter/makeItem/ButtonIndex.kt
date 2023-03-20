@@ -21,8 +21,8 @@ class ButtonIndex(val make1: Int,
         val make10Action = Pair(make10, MakeItemOption(10, index))
         val makeXAction = Pair(makeX, MakeItemOption(-1, index))
         return listOf(make1Action,
-                      make5Action,
-                      make10Action,
-                      makeXAction)
+                make5Action,
+                make10Action,
+                makeXAction)
     }
 }

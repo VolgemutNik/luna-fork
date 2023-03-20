@@ -44,7 +44,7 @@ public final class WidgetItemClickMessageReader extends GameMessageReader {
      * The first index click.
      *
      * @param player The player.
-     * @param msg The buffer to read from.
+     * @param msg    The buffer to read from.
      */
     private Event firstIndex(Player player, ByteMessage msg) {
         int interfaceId = msg.getShort(ValueType.ADD);
@@ -61,7 +61,7 @@ public final class WidgetItemClickMessageReader extends GameMessageReader {
      * The second index click.
      *
      * @param player The player.
-     * @param msg The buffer to read from.
+     * @param msg    The buffer to read from.
      */
     private Event secondIndex(Player player, ByteMessage msg) {
         int interfaceId = msg.getShort(true, ValueType.ADD, ByteOrder.LITTLE);
@@ -78,7 +78,7 @@ public final class WidgetItemClickMessageReader extends GameMessageReader {
      * The third index click.
      *
      * @param player The player.
-     * @param msg The buffer to read from.
+     * @param msg    The buffer to read from.
      */
     private Event thirdIndex(Player player, ByteMessage msg) {
         int interfaceId = msg.getShort(ByteOrder.LITTLE);
@@ -95,7 +95,7 @@ public final class WidgetItemClickMessageReader extends GameMessageReader {
      * The fourth index click.
      *
      * @param player The player.
-     * @param msg The buffer to read from.
+     * @param msg    The buffer to read from.
      */
     private Event fourthIndex(Player player, ByteMessage msg) {
         int index = msg.getShort(ValueType.ADD);
@@ -112,7 +112,7 @@ public final class WidgetItemClickMessageReader extends GameMessageReader {
      * The fifth index click.
      *
      * @param player The player.
-     * @param msg The buffer to read from.
+     * @param msg    The buffer to read from.
      */
     private Event fifthIndex(Player player, ByteMessage msg) {
         int index = msg.getShort(ByteOrder.LITTLE);

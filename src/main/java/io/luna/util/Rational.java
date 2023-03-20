@@ -60,7 +60,7 @@ public final class Rational extends Number {
     /**
      * Create a {@link Rational}.
      *
-     * @param numerator The numerator.
+     * @param numerator   The numerator.
      * @param denominator The denominator.
      */
     public Rational(int numerator, int denominator) {

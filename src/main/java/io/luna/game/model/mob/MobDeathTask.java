@@ -84,7 +84,7 @@ public abstract class MobDeathTask<T extends Mob> extends Task {
                     world.getNpcs().remove(mob);
                     break;
                 case POST_DEATH:
-                    if(mob.isRespawn()) {
+                    if (mob.isRespawn()) {
                         var defOptional = mob.getCombatDefinition().
                                 filter(def -> def.getRespawnTime() != -1).
                                 map(NpcCombatDefinition::getRespawnTime);
@@ -168,7 +168,7 @@ public abstract class MobDeathTask<T extends Mob> extends Task {
     /**
      * Handle a death stage.
      *
-     * @param stage The stage of death.
+     * @param stage  The stage of death.
      * @param source The source of death.
      */
     public abstract void handleDeath(DeathStage stage, Mob source);

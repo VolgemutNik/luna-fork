@@ -24,9 +24,9 @@ public abstract class DistancedAction<T extends Mob> extends RepeatingAction<T> 
     /**
      * Creates a new {@link DistancedAction}.
      *
-     * @param mob The mob this action is for.
+     * @param mob      The mob this action is for.
      * @param position The position.
-     * @param radius The radius to the position.
+     * @param radius   The radius to the position.
      */
     public DistancedAction(T mob, Position position, int radius) {
         super(mob, true, 1);

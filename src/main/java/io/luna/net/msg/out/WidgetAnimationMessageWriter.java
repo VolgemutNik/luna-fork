@@ -24,7 +24,7 @@ public final class WidgetAnimationMessageWriter extends GameMessageWriter {
     /**
      * Creates a new {@link WidgetAnimationMessageWriter}.
      *
-     * @param widgetId The widget.
+     * @param widgetId    The widget.
      * @param animationId The animation.
      */
     public WidgetAnimationMessageWriter(int widgetId, int animationId) {

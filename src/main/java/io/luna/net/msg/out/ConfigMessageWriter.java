@@ -25,7 +25,7 @@ public final class ConfigMessageWriter extends GameMessageWriter {
     /**
      * Creates a new {@link ConfigMessageWriter}.
      *
-     * @param id The identifier.
+     * @param id    The identifier.
      * @param state The value.
      */
     public ConfigMessageWriter(int id, int state) {

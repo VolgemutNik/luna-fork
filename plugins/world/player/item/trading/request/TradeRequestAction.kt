@@ -13,10 +13,10 @@ class TradeRequestAction(val plr: Player,
                          val to: Player) : DistancedAction<Player>(plr, to.position, 1) {
 
     override fun ignoreIf(other: Action<*>?): Boolean =
-        when (other) {
-            is TradeRequestAction -> to == other.to
-            else -> false
-        }
+            when (other) {
+                is TradeRequestAction -> to == other.to
+                else -> false
+            }
 
 
     override fun withinDistance() {

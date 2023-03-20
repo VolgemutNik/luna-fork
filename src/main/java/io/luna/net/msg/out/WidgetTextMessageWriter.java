@@ -29,7 +29,7 @@ public final class WidgetTextMessageWriter extends GameMessageWriter {
      * Creates a new {@link WidgetTextMessageWriter}.
      *
      * @param text The text.
-     * @param id The widget identifier.
+     * @param id   The widget identifier.
      */
     public WidgetTextMessageWriter(String text, int id) {
         this.text = text;

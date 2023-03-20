@@ -49,7 +49,7 @@ fun init(plr: Player) {
 
     plr.sendMessage("Welcome to Luna.")
     if (Luna.settings().betaMode()) {
-       plr.sendMessage("Server currently running in ${Luna.settings().runtimeMode()} mode.")
+        plr.sendMessage("Server currently running in ${Luna.settings().runtimeMode()} mode.")
     }
     checkMute(plr)
 }

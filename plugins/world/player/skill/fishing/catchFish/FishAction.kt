@@ -38,33 +38,36 @@ class FishAction(private val msg: NpcClickEvent,
     private var exp = 0.0
 
     override fun executeIf(start: Boolean) =
-        when {
-            mob.fishing.level < tool.level -> {
-                // Check if we have required level.
-                mob.sendMessage("You need a Fishing level of ${tool.level} to fish here.")
-                false
-            }
-            tool.bait != null && !mob.inventory.contains(tool.bait) -> {
-                // Check if we have required bait.
-                mob.sendMessage("You do not have the bait required to fish here.")
-                false
-            }
-            !mob.inventory.contains(tool.id) -> {
-                // Check if we have required tool.
-                mob.sendMessage("You do not have the tool required to fish here.")
-                false
-            }
-            else -> {
-                // Start fishing!
-                mob.animation(Animation(tool.animation))
-                if (start) {
-                    // TODO Send proper tool messages
-                    mob.sendMessage("You begin to fish...")
-                    delay = getFishingDelay()
+            when {
+                mob.fishing.level < tool.level -> {
+                    // Check if we have required level.
+                    mob.sendMessage("You need a Fishing level of ${tool.level} to fish here.")
+                    false
                 }
-                true
+
+                tool.bait != null && !mob.inventory.contains(tool.bait) -> {
+                    // Check if we have required bait.
+                    mob.sendMessage("You do not have the bait required to fish here.")
+                    false
+                }
+
+                !mob.inventory.contains(tool.id) -> {
+                    // Check if we have required tool.
+                    mob.sendMessage("You do not have the tool required to fish here.")
+                    false
+                }
+
+                else -> {
+                    // Start fishing!
+                    mob.animation(Animation(tool.animation))
+                    if (start) {
+                        // TODO Send proper tool messages
+                        mob.sendMessage("You begin to fish...")
+                        delay = getFishingDelay()
+                    }
+                    true
+                }
             }
-        }
 
     override fun execute() {
         // Send messages.
@@ -98,16 +101,16 @@ class FishAction(private val msg: NpcClickEvent,
     }
 
     override fun remove() =
-        if (tool.bait != null)
-            listOf(Item(tool.bait)) else emptyList()
+            if (tool.bait != null)
+                listOf(Item(tool.bait)) else emptyList()
 
     override fun stop() = mob.animation(Animation.CANCEL)
 
     override fun ignoreIf(other: Action<*>?) =
-        when (other) {
-            is FishAction -> msg.npc == other.msg.npc
-            else -> false
-        }
+            when (other) {
+                is FishAction -> msg.npc == other.msg.npc
+                else -> false
+            }
 
     /**
      * Computes the next fishing delay.

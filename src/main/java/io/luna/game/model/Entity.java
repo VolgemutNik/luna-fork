@@ -62,9 +62,9 @@ public abstract class Entity {
     /**
      * Creates a new {@link Entity}.
      *
-     * @param context The context instance.
+     * @param context  The context instance.
      * @param position The current position.
-     * @param type The type.
+     * @param type     The type.
      */
     public Entity(LunaContext context, Position position, EntityType type) {
         this.context = context;
@@ -81,7 +81,7 @@ public abstract class Entity {
      * Creates a new {@link Entity}.
      *
      * @param context The context instance.
-     * @param type The type.
+     * @param type    The type.
      */
     public Entity(LunaContext context, EntityType type) {
         this.context = context;

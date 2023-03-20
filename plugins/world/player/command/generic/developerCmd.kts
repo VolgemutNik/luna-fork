@@ -35,10 +35,10 @@ cmd("npc", RIGHTS_DEV) {
 cmd("object", RIGHTS_DEV) {
     val pos = plr.position
     world.addObject(id = asInt(0),
-                    x = pos.x,
-                    y = pos.y,
-                    z = pos.z,
-                    plr = plr)
+            x = pos.x,
+            y = pos.y,
+            z = pos.z,
+            plr = plr)
 }
 
 /**

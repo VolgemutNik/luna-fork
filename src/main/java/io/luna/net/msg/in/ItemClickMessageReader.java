@@ -29,16 +29,16 @@ public final class ItemClickMessageReader extends GameMessageReader {
         int opcode = msg.getOpcode();
         player.interruptAction();
         switch (opcode) {
-        case 122:
-            return firstIndex(player, msg.getPayload());
-        case 41:
-            return secondIndex(player, msg.getPayload());
-        case 16:
-            return thirdIndex(player, msg.getPayload());
-        case 75:
-            return fourthIndex(player, msg.getPayload());
-        case 87:
-            return fifthIndex(player, msg.getPayload());
+            case 122:
+                return firstIndex(player, msg.getPayload());
+            case 41:
+                return secondIndex(player, msg.getPayload());
+            case 16:
+                return thirdIndex(player, msg.getPayload());
+            case 75:
+                return fourthIndex(player, msg.getPayload());
+            case 87:
+                return fifthIndex(player, msg.getPayload());
         }
         return null;
     }
@@ -46,9 +46,9 @@ public final class ItemClickMessageReader extends GameMessageReader {
     /**
      * Validates the read data.
      *
-     * @param player The player.
-     * @param id The item identifier.
-     * @param index The index.
+     * @param player      The player.
+     * @param id          The item identifier.
+     * @param index       The index.
      * @param interfaceId The interface identifier.
      * @return {@code true} if the item clicked is valid.
      */
@@ -58,9 +58,9 @@ public final class ItemClickMessageReader extends GameMessageReader {
         checkState(interfaceId > 0, "interfaceId out of range");
 
         switch (interfaceId) {
-        case 3214:
-            Inventory inventory = player.getInventory();
-            return inventory.computeIdForIndex(index).orElse(-1) == id;
+            case 3214:
+                Inventory inventory = player.getInventory();
+                return inventory.computeIdForIndex(index).orElse(-1) == id;
         }
         return true;
     }
@@ -69,7 +69,7 @@ public final class ItemClickMessageReader extends GameMessageReader {
      * Click the first index of an object.
      *
      * @param player The player.
-     * @param msg The buffer to read from.
+     * @param msg    The buffer to read from.
      * @return The event to post.
      */
     private Event firstIndex(Player player, ByteMessage msg) {
@@ -87,7 +87,7 @@ public final class ItemClickMessageReader extends GameMessageReader {
      * Click the second index of an object.
      *
      * @param player The player.
-     * @param msg The buffer to read from.
+     * @param msg    The buffer to read from.
      * @return The event to post.
      */
     private Event secondIndex(Player player, ByteMessage msg) {
@@ -105,7 +105,7 @@ public final class ItemClickMessageReader extends GameMessageReader {
      * Click the third index of an object.
      *
      * @param player The player.
-     * @param msg The buffer to read from.
+     * @param msg    The buffer to read from.
      * @return The event to post.
      */
     private Event thirdIndex(Player player, ByteMessage msg) {
@@ -123,7 +123,7 @@ public final class ItemClickMessageReader extends GameMessageReader {
      * Click the fourth index of an object.
      *
      * @param player The player.
-     * @param msg The buffer to read from.
+     * @param msg    The buffer to read from.
      * @return The event to post.
      */
     private Event fourthIndex(Player player, ByteMessage msg) {
@@ -141,7 +141,7 @@ public final class ItemClickMessageReader extends GameMessageReader {
      * Click the fifth index of an object.
      *
      * @param player The player.
-     * @param msg The buffer to read from.
+     * @param msg    The buffer to read from.
      * @return The event to post.
      */
     private Event fifthIndex(Player player, ByteMessage msg) {

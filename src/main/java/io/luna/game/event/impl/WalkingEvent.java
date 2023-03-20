@@ -23,8 +23,8 @@ public final class WalkingEvent extends PlayerEvent {
     /**
      * Creates a new {@link WalkingEvent}.
      *
-     * @param player The player.
-     * @param path The path that the player will walk.
+     * @param player  The player.
+     * @param path    The path that the player will walk.
      * @param running If the player is running.
      */
     public WalkingEvent(Player player, Step[] path, boolean running) {

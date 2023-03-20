@@ -76,7 +76,7 @@ public final class Chunk {
      * Returns a stream over {@code type} entities in this chunk.
      *
      * @param type The entity type.
-     * @param <E> The type.
+     * @param <E>  The type.
      * @return The stream.
      */
     public <E extends Entity> Stream<E> stream(EntityType type) {
@@ -87,7 +87,7 @@ public final class Chunk {
      * Returns an iterator over {@code type} entities in this chunk.
      *
      * @param type The entity type.
-     * @param <E> The type.
+     * @param <E>  The type.
      * @return The iterator.
      */
     public <E extends Entity> Iterator<E> iterator(EntityType type) {

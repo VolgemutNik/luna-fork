@@ -66,8 +66,8 @@ public final class MessageRepositoryFileParser extends AbstractJsonFileParser<Ga
     /**
      * Creates a new {@link GameMessageReader} using reflection.
      *
-     * @param opcode The opcode.
-     * @param size The size.
+     * @param opcode    The opcode.
+     * @param size      The size.
      * @param className The simple class name.
      * @return The message listener instance.
      * @throws ReflectiveOperationException If any errors occur while creating the listener instance.

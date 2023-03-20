@@ -18,5 +18,5 @@ object TickTimerTypeAdapter : TypeAdapter<TickTimer>() {
     }
 
     override fun read(reader: JsonReader?): TickTimer =
-        TickTimer(world, reader?.nextLong()!!)
+            TickTimer(world, reader?.nextLong()!!)
 }

@@ -23,13 +23,14 @@ class MakeUnfAction(plr: Player,
     }
 
     override fun executeIf(start: Boolean) =
-        when {
-            mob.herblore.level < unfPotion.level -> {
-                mob.sendMessage("You need a Herblore level of ${unfPotion.level} to make this potion.")
-                false
+            when {
+                mob.herblore.level < unfPotion.level -> {
+                    mob.sendMessage("You need a Herblore level of ${unfPotion.level} to make this potion.")
+                    false
+                }
+
+                else -> true
             }
-            else -> true
-        }
 
     override fun execute() {
         mob.sendMessage("You put the ${unfPotion.herbName} into the vial of water.")
@@ -41,8 +42,8 @@ class MakeUnfAction(plr: Player,
     override fun remove() = listOf(unfPotion.herbItem, Item(UnfPotion.VIAL_OF_WATER))
 
     override fun ignoreIf(other: Action<*>) =
-        when (other) {
-            is MakeUnfAction -> unfPotion == other.unfPotion
-            else -> false
-        }
+            when (other) {
+                is MakeUnfAction -> unfPotion == other.unfPotion
+                else -> false
+            }
 }

@@ -24,8 +24,8 @@ public final class CommandEvent extends PlayerEvent {
      * Creates a new {@link CommandEvent}.
      *
      * @param player The player.
-     * @param name The command name.
-     * @param args The command arguments.
+     * @param name   The command name.
+     * @param args   The command arguments.
      */
     public CommandEvent(Player player, String name, String[] args) {
         super(player);
@@ -59,7 +59,7 @@ public final class CommandEvent extends PlayerEvent {
     /**
      * Replaces a character of the argument at {@code index}.
      *
-     * @param index The index.
+     * @param index   The index.
      * @param oldChar The character to replace.
      * @param newChar The character to replace with.
      * @return The argument, with the characters replaced.
@@ -76,8 +76,8 @@ public final class CommandEvent extends PlayerEvent {
      */
     public String getInputFrom(int index) {
         StringBuilder sb = new StringBuilder();
-        for(int slot = 0; slot < args.length; slot++) {
-            if(slot >= index) {
+        for (int slot = 0; slot < args.length; slot++) {
+            if (slot >= index) {
                 sb.append(args[slot]).append(" ");
             }
         }

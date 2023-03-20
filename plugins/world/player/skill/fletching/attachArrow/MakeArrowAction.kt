@@ -55,8 +55,8 @@ class MakeArrowAction(plr: Player,
     }
 
     override fun ignoreIf(other: Action<*>) =
-        when (other) {
-            is MakeArrowAction -> arrow == other.arrow
-            else -> false
-        }
+            when (other) {
+                is MakeArrowAction -> arrow == other.arrow
+                else -> false
+            }
 }

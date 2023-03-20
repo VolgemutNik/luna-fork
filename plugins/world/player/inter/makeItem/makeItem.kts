@@ -52,11 +52,11 @@ fun makeItem(msg: ButtonClickEvent, inter: MakeItemDialogueInterface, action: Ma
  * Listens for button clicks on the [MakeItemDialogueInterface].
  */
 on(ButtonClickEvent::class)
-    .filter { plr.interfaces.isOpen(MakeItemDialogueInterface::class) }
-    .then {
-        val action = buttonMap[id]
-        if (action != null) {
-            val inter = plr.interfaces.get(MakeItemDialogueInterface::class)!!
-            makeItem(this, inter, action)
+        .filter { plr.interfaces.isOpen(MakeItemDialogueInterface::class) }
+        .then {
+            val action = buttonMap[id]
+            if (action != null) {
+                val inter = plr.interfaces.get(MakeItemDialogueInterface::class)!!
+                makeItem(this, inter, action)
+            }
         }
-    }

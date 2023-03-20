@@ -55,7 +55,7 @@ public final class AttributeMap {
             }
 
             checkState(loadedAttributes.put(key, value) == null,
-                "Duplicate persistent attribute key {%s}.", key);
+                    "Duplicate persistent attribute key {%s}.", key);
         });
     }
 
@@ -78,9 +78,9 @@ public final class AttributeMap {
     /**
      * Sets {@code attr} to {@code value}.
      *
-     * @param attr The attribute to set.
+     * @param attr  The attribute to set.
      * @param value The value to set it to.
-     * @param <T> The attribute type.
+     * @param <T>   The attribute type.
      */
     public <T> void set(Attribute<T> attr, T value) {
         requireNonNull(value, "Value cannot be null.");
@@ -98,7 +98,7 @@ public final class AttributeMap {
      * value.
      *
      * @param attr The attribute to retrieve.
-     * @param <T> The attribute type.
+     * @param <T>  The attribute type.
      * @return The value of the attribute.
      */
     public <T> T get(Attribute<T> attr) {

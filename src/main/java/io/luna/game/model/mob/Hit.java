@@ -52,7 +52,7 @@ public final class Hit {
      * Creates a new {@link Hit}.
      *
      * @param damage The damage.
-     * @param type The type.
+     * @param type   The type.
      */
     public Hit(int damage, HitType type) {
         this.damage = damage;

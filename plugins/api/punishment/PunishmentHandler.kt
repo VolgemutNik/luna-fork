@@ -66,10 +66,10 @@ object PunishmentHandler {
             return game.submit {
                 try {
                     Files.writeString(IP_BANS,
-                                (target.currentIp + '\n'),
-                                StandardOpenOption.CREATE,
-                                StandardOpenOption.WRITE,
-                                StandardOpenOption.APPEND)
+                            (target.currentIp + '\n'),
+                            StandardOpenOption.CREATE,
+                            StandardOpenOption.WRITE,
+                            StandardOpenOption.APPEND)
                 } catch (e: IOException) {
                     fileLogger.error("Could not write IP ban entry to file.")
                     throw e

@@ -94,8 +94,8 @@ public final class AreaManager implements Iterable<Area> {
     public void notifyLogin(Player player) {
         var position = player.getPosition();
         registeredAreas.stream()
-            .filter(area -> area.contains(position))
-            .forEach(area -> area.enter(player));
+                .filter(area -> area.contains(position))
+                .forEach(area -> area.enter(player));
     }
 
     /**
@@ -106,8 +106,8 @@ public final class AreaManager implements Iterable<Area> {
     public void notifyLogout(Player player) {
         var position = player.getPosition();
         registeredAreas.stream()
-            .filter(area -> area.contains(position))
-            .forEach(area -> area.exit(player));
+                .filter(area -> area.contains(position))
+                .forEach(area -> area.exit(player));
     }
 
     /**
@@ -118,8 +118,8 @@ public final class AreaManager implements Iterable<Area> {
      */
     public List<Area> getAllContaining(Position position) {
         return registeredAreas.stream()
-            .filter(area -> area.contains(position))
-            .collect(Collectors.toList());
+                .filter(area -> area.contains(position))
+                .collect(Collectors.toList());
     }
 
     /**

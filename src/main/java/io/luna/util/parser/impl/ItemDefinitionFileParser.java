@@ -33,7 +33,7 @@ public final class ItemDefinitionFileParser extends AbstractJsonFileParser<ItemD
         boolean tradeable = token.get("trade?").getAsBoolean();
         String[] inventoryActions = GsonUtils.getAsType(token.get("inventory_actions"), String[].class);
         String[] groundActions = GsonUtils.getAsType(token.get("ground_actions"), String[].class);
-        return new ItemDefinition(id, name, stackable,baseValue, notedId, unnotedId, membersOnly, weight,
+        return new ItemDefinition(id, name, stackable, baseValue, notedId, unnotedId, membersOnly, weight,
                 tradeable, inventoryActions, groundActions);
     }
 

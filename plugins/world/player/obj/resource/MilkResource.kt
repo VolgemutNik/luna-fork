@@ -13,17 +13,17 @@ import io.luna.game.model.mob.Player
 object MilkResource : Resource() {
 
     override fun matches(obj: ObjectDefinition) =
-        when (obj.name) {
-            "Dairy Cow" -> true
-            else -> false
-        }
+            when (obj.name) {
+                "Dairy Cow" -> true
+                else -> false
+            }
 
 
     override fun getFilled(empty: Int): Int? =
-        when (empty) {
-            1925 -> 1927 // Empty bucket -> Bucket of milk
-            else -> null
-        }
+            when (empty) {
+                1925 -> 1927 // Empty bucket -> Bucket of milk
+                else -> null
+            }
 
     override fun onFill(plr: Player) = plr.animation(Animation(2292))
 

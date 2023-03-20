@@ -32,11 +32,11 @@ public final class ChatEvent extends PlayerEvent {
     /**
      * Creates a new {@link ChatEvent}.
      *
-     * @param player The player.
-     * @param effects The chat effects.
-     * @param color The chat color.
+     * @param player        The player.
+     * @param effects       The chat effects.
+     * @param color         The chat color.
      * @param messageLength The message length.
-     * @param message The message.
+     * @param message       The message.
      */
     public ChatEvent(Player player, int effects, int color, int messageLength, byte[] message) {
         super(player);

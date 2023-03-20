@@ -33,7 +33,7 @@ public final class DialogueQueue {
     /**
      * Creates a new {@link DialogueQueue}.
      *
-     * @param player The player.
+     * @param player    The player.
      * @param dialogues The queue of dialogues.
      */
     DialogueQueue(Player player, Queue<DialogueInterface> dialogues) {

@@ -35,14 +35,14 @@ public final class SwapItemsMessageReader extends GameMessageReader {
         Optional<ItemContainer> itemContainer = Optional.empty();
 
         switch (interfaceId) {
-        case 3214:
-            itemContainer = Optional.of(player.getInventory());
-            break;
-        case 5382:
-            if(player.getBank().isOpen()) {
-                itemContainer = Optional.of(player.getBank());
-            }
-            break;
+            case 3214:
+                itemContainer = Optional.of(player.getInventory());
+                break;
+            case 5382:
+                if (player.getBank().isOpen()) {
+                    itemContainer = Optional.of(player.getBank());
+                }
+                break;
         }
 
         itemContainer.ifPresent(items -> {

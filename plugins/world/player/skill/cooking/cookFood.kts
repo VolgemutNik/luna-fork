@@ -42,12 +42,12 @@ fun cook(plr: Player, amount: Int? = null) {
  * Use raw food on fire and stove.
  */
 on(ItemOnObjectEvent::class)
-    .filter { fires.contains(objectId) }
-    .then { open(this, Food.RAW_TO_FOOD[itemId], true) }
+        .filter { fires.contains(objectId) }
+        .then { open(this, Food.RAW_TO_FOOD[itemId], true) }
 
 on(ItemOnObjectEvent::class)
-    .filter { ranges.contains(objectId) }
-    .then { open(this, Food.RAW_TO_FOOD[itemId], false) }
+        .filter { ranges.contains(objectId) }
+        .then { open(this, Food.RAW_TO_FOOD[itemId], false) }
 
 /**
  * Button clicks from the [CookingInterface].

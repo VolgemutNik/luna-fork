@@ -15,7 +15,7 @@ fun openInterface(msg: ItemOnItemEvent, id: Int) {
         val interfaces = msg.plr.interfaces
         interfaces.open(object : MakeItemDialogueInterface(*log.unstrungIds) {
             override fun makeItem(plr: Player, id: Int, index: Int, forAmount: Int) =
-                plr.submitAction(CutLogAction(plr, log.id, log.bows[index], forAmount))
+                    plr.submitAction(CutLogAction(plr, log.id, log.bows[index], forAmount))
         })
     }
 }

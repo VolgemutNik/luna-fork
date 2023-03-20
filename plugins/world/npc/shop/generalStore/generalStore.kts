@@ -33,8 +33,8 @@ shop("General Store") {
  */
 npc1(520) {
     plr.newDialogue()
-        .npc(npc.id, "Hi, here's what I have in stock for today!")
-        .then { it.interfaces.openShop("General Store") }
+            .npc(npc.id, "Hi, here's what I have in stock for today!")
+            .then { it.interfaces.openShop("General Store") }
 }
 
 /**
@@ -42,6 +42,6 @@ npc1(520) {
  */
 on(ServerLaunchEvent::class) {
     world.addNpc(id = 520,
-                 x = 3091,
-                 y = 3250)
+            x = 3091,
+            y = 3250)
 }

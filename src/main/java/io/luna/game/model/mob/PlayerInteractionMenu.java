@@ -47,9 +47,9 @@ public final class PlayerInteractionMenu implements Iterable<PlayerInteraction> 
      */
     public Optional<PlayerInteraction> forInteraction(String name) {
         return Arrays.stream(interactions)
-            .filter(Objects::nonNull)
-            .filter(interaction -> interaction.getName().equals(name))
-            .findAny();
+                .filter(Objects::nonNull)
+                .filter(interaction -> interaction.getName().equals(name))
+                .findAny();
     }
 
     /**

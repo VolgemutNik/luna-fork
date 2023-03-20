@@ -26,14 +26,15 @@ class StringBowAction(plr: Player,
     override fun remove() = listOf(bow.unstrungItem, Item(Bow.BOW_STRING))
 
     override fun executeIf(start: Boolean) =
-        when {
-            mob.fletching.level < bow.level -> {
-                mob.sendMessage("You need a Fletching level of ${bow.level} to string this bow.")
-                false
+            when {
+                mob.fletching.level < bow.level -> {
+                    mob.sendMessage("You need a Fletching level of ${bow.level} to string this bow.")
+                    false
+                }
+
+                !mob.inventory.containsAll(Bow.BOW_STRING, bow.unstrung) -> false
+                else -> true
             }
-            !mob.inventory.containsAll(Bow.BOW_STRING, bow.unstrung) -> false
-            else -> true
-        }
 
     override fun execute() {
         mob.sendMessage("You add a string to the bow.")
@@ -42,8 +43,8 @@ class StringBowAction(plr: Player,
     }
 
     override fun ignoreIf(other: Action<*>) =
-        when (other) {
-            is StringBowAction -> bow == other.bow
-            else -> false
-        }
+            when (other) {
+                is StringBowAction -> bow == other.bow
+                else -> false
+            }
 }

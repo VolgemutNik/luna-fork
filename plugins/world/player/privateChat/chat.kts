@@ -10,7 +10,7 @@ import io.luna.net.msg.out.PrivateChatMessageWriter
  */
 fun sendMessage(plr: Player, name: Long, msg: ByteArray) {
     world.getPlayer(name)
-        .ifPresent { it.queue(PrivateChatMessageWriter(plr.usernameHash, msg)) }
+            .ifPresent { it.queue(PrivateChatMessageWriter(plr.usernameHash, msg)) }
 }
 
 /**

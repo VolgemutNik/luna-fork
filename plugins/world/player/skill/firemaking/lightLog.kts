@@ -24,10 +24,10 @@ fun delayTime(plr: Player, log: Log): Int {
  */
 
 on(ItemOnItemEvent::class)
-    .filter { matches(LightLogAction.TINDERBOX_ID) }
-    .then {
-        val log = lookup(Log.ID_TO_LOG)
-        if (log != null) {
-            plr.submitAction(LightLogAction(plr, delayTime(plr, log), log))
+        .filter { matches(LightLogAction.TINDERBOX_ID) }
+        .then {
+            val log = lookup(Log.ID_TO_LOG)
+            if (log != null) {
+                plr.submitAction(LightLogAction(plr, delayTime(plr, log), log))
+            }
         }
-    }

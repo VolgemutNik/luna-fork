@@ -15,7 +15,7 @@ class AttributeDelegate<T : Any>(val attr: Attribute<T>) {
      * Retrieve the attribute value.
      */
     operator fun getValue(player: Player, property: KProperty<*>): T =
-        player.attributes[attr]
+            player.attributes[attr]
 
     /**
      * Set the attribute value.

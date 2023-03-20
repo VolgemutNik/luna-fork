@@ -26,10 +26,10 @@ public abstract class InventoryAction extends RepeatingAction<Player> {
     /**
      * Creates a new {@link InventoryAction}.
      *
-     * @param player The player.
+     * @param player  The player.
      * @param instant If this action executes instantly.
-     * @param delay The delay of this action.
-     * @param times The amount of times to repeat.
+     * @param delay   The delay of this action.
+     * @param times   The amount of times to repeat.
      */
     public InventoryAction(Player player, boolean instant, int delay, int times) {
         super(player, instant, delay);
@@ -39,9 +39,9 @@ public abstract class InventoryAction extends RepeatingAction<Player> {
     /**
      * Creates a new {@link InventoryAction} with a delay of {@code 1}.
      *
-     * @param player The player.
+     * @param player  The player.
      * @param instant If this action executes instantly.
-     * @param times The amount of times to repeat.
+     * @param times   The amount of times to repeat.
      */
     public InventoryAction(Player player, boolean instant, int times) {
         this(player, instant, 1, times);

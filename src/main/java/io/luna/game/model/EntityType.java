@@ -36,5 +36,5 @@ public enum EntityType {
      * An immutable enum set of these values.
      */
     public static final Set<EntityType> ALL = Sets.immutableEnumSet(EnumSet.allOf(EntityType.class));
-    
+
 }

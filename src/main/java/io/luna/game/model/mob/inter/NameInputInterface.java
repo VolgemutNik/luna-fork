@@ -27,7 +27,7 @@ public abstract class NameInputInterface extends InputInterface {
      * A function invoked when the Player has entered a name.
      *
      * @param player The player.
-     * @param value The string entered.
+     * @param value  The string entered.
      */
     public abstract void onNameInput(Player player, String value);
 }

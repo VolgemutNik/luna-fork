@@ -16,14 +16,14 @@ public class NpcUpdateBlockSet extends AbstractUpdateBlockSet<Npc> {
      * An immutable list of update blocks.
      */
     private static final ImmutableList<UpdateBlock> UPDATE_BLOCKS = ImmutableList.of(
-        new AnimationUpdateBlock(),
-        new SecondaryHitUpdateBlock(),
-        new GraphicUpdateBlock(),
-        new InteractionUpdateBlock(),
-        new ForcedChatUpdateBlock(),
-        new PrimaryHitUpdateBlock(),
-        new TransformUpdateBlock(),
-        new FacePositionUpdateBlock()
+            new AnimationUpdateBlock(),
+            new SecondaryHitUpdateBlock(),
+            new GraphicUpdateBlock(),
+            new InteractionUpdateBlock(),
+            new ForcedChatUpdateBlock(),
+            new PrimaryHitUpdateBlock(),
+            new TransformUpdateBlock(),
+            new FacePositionUpdateBlock()
     );
 
     /**

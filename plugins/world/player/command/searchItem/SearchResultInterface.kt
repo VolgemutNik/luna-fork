@@ -17,20 +17,20 @@ class SearchResultInterface(private val searchToken: String) : StandardInterface
      * A list of empty text widget messages.
      */
     val clearWidgets = mutableListOf(5388, 5389, 5390, 5391, 8132, 8133)
-        .map { WidgetTextMessageWriter("", it) }
+            .map { WidgetTextMessageWriter("", it) }
 
     override fun onOpen(plr: Player) {
 
         // Perform search here, filter items based on search token.
         val itemsFound = ItemDefinition.ALL
-            .stream()
-            .filter { it.id > 0 && !it.isNoted && it.name.toLowerCase().contains(searchToken) }
-            .map { Item(it.id, 1) }
-            .toList()
+                .stream()
+                .filter { it.id > 0 && !it.isNoted && it.name.toLowerCase().contains(searchToken) }
+                .map { Item(it.id, 1) }
+                .toList()
 
         // Display the items, truncating results if necessary.
         fun display(items: List<Item>) =
-            plr.queue(WidgetItemsMessageWriter(5382, items))
+                plr.queue(WidgetItemsMessageWriter(5382, items))
 
         val resultCount = itemsFound.size
         val maxResults = plr.bank.capacity()

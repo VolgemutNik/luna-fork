@@ -75,7 +75,7 @@ public final class Equipment extends ItemContainer {
         /**
          * Posts an equipment change event.
          *
-         * @param index The index of the change.
+         * @param index   The index of the change.
          * @param oldItem The old item.
          * @param newItem The new item.
          */
@@ -280,8 +280,8 @@ public final class Equipment extends ItemContainer {
      * An immutable list of bonus names.
      */
     public static final ImmutableList<String> BONUS_NAMES = ImmutableList.of(
-        "Stab", "Slash", "Crush", "Magic", "Range", "Stab",
-        "Slash", "Crush", "Magic", "Range", "Strength", "Prayer"
+            "Stab", "Slash", "Crush", "Magic", "Range", "Stab",
+            "Slash", "Crush", "Magic", "Range", "Strength", "Prayer"
     );
 
     /**
@@ -389,7 +389,7 @@ public final class Equipment extends ItemContainer {
      * Equips an item from the inventory.
      *
      * @param inventoryIndex The inventory index of the item.
-     * Returns {@code true} if successful.
+     *                       Returns {@code true} if successful.
      */
     public boolean equip(int inventoryIndex) {
 

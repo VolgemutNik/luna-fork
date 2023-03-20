@@ -22,4 +22,4 @@ fun cmd(name: String, rights: PlayerRights, action: CommandEvent.() -> Unit) {
  * Performs a lookup for a player based on the arguments from [index] onwards. By default, it starts from index 0.
  */
 fun getPlayer(msg: CommandEvent, index: Int = 0, action: (Player) -> Unit) =
-    world.getPlayer(msg.getInputFrom(index)).ifPresent(action)
+        world.getPlayer(msg.getInputFrom(index)).ifPresent(action)

@@ -24,7 +24,7 @@ import kotlin.reflect.jvm.jvmErasure
 fun <E : Area> area(parentType: KClass<E>, receiver: AreaReceiver.() -> Unit): E {
     // TODO Unit tests
     // TODO find a different way to do this.
-   val primaryConstructor = parentType.primaryConstructor
+    val primaryConstructor = parentType.primaryConstructor
     require(primaryConstructor != null) { "Parent area must have a primary constructor." }
 
     val parameters = primaryConstructor.parameters
@@ -38,9 +38,9 @@ fun <E : Area> area(parentType: KClass<E>, receiver: AreaReceiver.() -> Unit): E
     receiverInstance.validate()
 
     var areaInstance = primaryConstructor.call(receiverInstance.swX,
-                                               receiverInstance.swY,
-                                               receiverInstance.neX,
-                                               receiverInstance.neY)
+            receiverInstance.swY,
+            receiverInstance.neX,
+            receiverInstance.neY)
     world.areas.register(areaInstance)
     return areaInstance
 }
@@ -75,7 +75,7 @@ fun area(receiver: ListeningAreaReceiver.() -> Unit): Area {
     receiverInstance.validate()
 
     val areaInstance = object : Area(receiverInstance.swX!!, receiverInstance.swY!!,
-                                     receiverInstance.neX!!, receiverInstance.neY!!) {
+            receiverInstance.neX!!, receiverInstance.neY!!) {
         override fun exit(player: Player) {
             receiverInstance.exit?.invoke(player)
         }
@@ -96,4 +96,4 @@ fun area(receiver: ListeningAreaReceiver.() -> Unit): Area {
  * Returns `true` if this player is inside an [areaType] area.
  */
 fun Entity.inside(areaType: KClass<out Area>) =
-    world.areas.stream().anyMatch { it.contains(this) && areaType.isInstance(it) }
+        world.areas.stream().anyMatch { it.contains(this) && areaType.isInstance(it) }

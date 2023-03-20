@@ -25,9 +25,9 @@ public abstract class ThrottledAction<T extends Mob> extends Action<T> {
     /**
      * Creates a new {@link ThrottledAction}.
      *
-     * @param mob The mob assigned to this action.
+     * @param mob    The mob assigned to this action.
      * @param source The time source.
-     * @param delay The throttle delay, in ticks.
+     * @param delay  The throttle delay, in ticks.
      */
     public ThrottledAction(T mob, TimeSource source, int delay) {
         super(mob);

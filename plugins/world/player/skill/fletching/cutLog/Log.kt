@@ -8,17 +8,17 @@ import world.player.skill.fletching.stringBow.Bow.*
  */
 enum class Log(val id: Int, val bows: List<Bow>) {
     NORMAL(id = 1511,
-           bows = listOf(ARROW_SHAFT, SHORTBOW, LONGBOW)),
+            bows = listOf(ARROW_SHAFT, SHORTBOW, LONGBOW)),
     OAK(id = 1521,
-        bows = listOf(OAK_SHORTBOW, OAK_LONGBOW)),
+            bows = listOf(OAK_SHORTBOW, OAK_LONGBOW)),
     WILLOW(id = 1519,
-           bows = listOf(WILLOW_SHORTBOW, WILLOW_LONGBOW)),
+            bows = listOf(WILLOW_SHORTBOW, WILLOW_LONGBOW)),
     MAPLE(id = 1517,
-          bows = listOf(MAPLE_SHORTBOW, MAPLE_LONGBOW)),
+            bows = listOf(MAPLE_SHORTBOW, MAPLE_LONGBOW)),
     YEW(id = 1515,
-        bows = listOf(YEW_SHORTBOW, YEW_LONGBOW)),
+            bows = listOf(YEW_SHORTBOW, YEW_LONGBOW)),
     MAGIC(id = 1513,
-          bows = listOf(MAGIC_SHORTBOW, MAGIC_LONGBOW));
+            bows = listOf(MAGIC_SHORTBOW, MAGIC_LONGBOW));
 
     companion object {
 

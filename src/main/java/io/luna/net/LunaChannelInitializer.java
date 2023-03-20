@@ -49,7 +49,7 @@ public final class LunaChannelInitializer extends ChannelInitializer<SocketChann
     /**
      * Creates a new {@link LunaChannelInitializer}.
      *
-     * @param context The context instance.
+     * @param context       The context instance.
      * @param channelFilter A channel handler that will filter channels.
      * @param msgRepository The message repository.
      */

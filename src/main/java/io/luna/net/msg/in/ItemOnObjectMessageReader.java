@@ -60,13 +60,13 @@ public final class ItemOnObjectMessageReader extends GameMessageReader {
     /**
      * Validates the read data.
      *
-     * @param player The player.
-     * @param itemId The used item identifier.
-     * @param itemIndex The used item index.
+     * @param player          The player.
+     * @param itemId          The used item identifier.
+     * @param itemIndex       The used item index.
      * @param itemInterfaceId The used item interface identifier.
-     * @param objectId The used with object.
-     * @param objectX The used with object X.
-     * @param objectY The used with object Y.
+     * @param objectId        The used with object.
+     * @param objectX         The used with object X.
+     * @param objectY         The used with object Y.
      * @return {@code true} if the decoded data is valid.
      */
     private boolean validate(Player player, int itemId, int itemIndex, int itemInterfaceId, int objectId,

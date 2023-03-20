@@ -38,9 +38,9 @@ public final class NpcDialogueInterface extends DialogueInterface {
     /**
      * Creates a new {@link NpcDialogueInterface}.
      *
-     * @param npcId The NPC identifier.
+     * @param npcId      The NPC identifier.
      * @param expression The expression.
-     * @param text The text.
+     * @param text       The text.
      */
     public NpcDialogueInterface(int npcId, Expression expression, String... text) {
         this(npcId, expression, 0, text);
@@ -49,9 +49,9 @@ public final class NpcDialogueInterface extends DialogueInterface {
     /**
      * Creates a new {@link NpcDialogueInterface}.
      *
-     * @param npcId The NPC identifier.
+     * @param npcId                 The NPC identifier.
      * @param expressionAnimationId The expression animation id
-     * @param text The text.
+     * @param text                  The text.
      */
     public NpcDialogueInterface(int npcId, int expressionAnimationId, String... text) {
         this(npcId, null, expressionAnimationId, text);
@@ -60,10 +60,10 @@ public final class NpcDialogueInterface extends DialogueInterface {
     /**
      * Creates a new {@link NpcDialogueInterface}.
      *
-     * @param npcId The NPC identifier.
-     * @param expression The expression.
+     * @param npcId                 The NPC identifier.
+     * @param expression            The expression.
      * @param expressionAnimationId The expression animation id
-     * @param text The text.
+     * @param text                  The text.
      */
     private NpcDialogueInterface(int npcId, Expression expression, int expressionAnimationId, String... text) {
         super(DialogueUtils.npcDialogue(text.length));

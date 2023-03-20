@@ -52,61 +52,61 @@ button(5386) { setWithdrawMode(plr, true) }
  * Withdraw/deposit 1.
  */
 on(WidgetItemFirstClickEvent::class)
-    .filter { widgetId == 5064 && plr.bank.isOpen }
-    .then { deposit(this, 1) }
+        .filter { widgetId == 5064 && plr.bank.isOpen }
+        .then { deposit(this, 1) }
 
 on(WidgetItemFirstClickEvent::class)
-    .filter { widgetId == 5382 && plr.bank.isOpen }
-    .then { withdraw(this, 1) }
+        .filter { widgetId == 5382 && plr.bank.isOpen }
+        .then { withdraw(this, 1) }
 
 /**
  * Withdraw/deposit 5.
  */
 on(WidgetItemSecondClickEvent::class)
-    .filter { widgetId == 5064 && plr.bank.isOpen }
-    .then { deposit(this, 5) }
+        .filter { widgetId == 5064 && plr.bank.isOpen }
+        .then { deposit(this, 5) }
 
 on(WidgetItemSecondClickEvent::class)
-    .filter { widgetId == 5382 && plr.bank.isOpen }
-    .then { withdraw(this, 5) }
+        .filter { widgetId == 5382 && plr.bank.isOpen }
+        .then { withdraw(this, 5) }
 
 /**
  * Withdraw/deposit 10.
  */
 on(WidgetItemThirdClickEvent::class)
-    .filter { widgetId == 5064 && plr.bank.isOpen }
-    .then { deposit(this, 10) }
+        .filter { widgetId == 5064 && plr.bank.isOpen }
+        .then { deposit(this, 10) }
 
 on(WidgetItemThirdClickEvent::class)
-    .filter { widgetId == 5382 && plr.bank.isOpen }
-    .then { withdraw(this, 10) }
+        .filter { widgetId == 5382 && plr.bank.isOpen }
+        .then { withdraw(this, 10) }
 
 /**
  * Withdraw/deposit all.
  */
 on(WidgetItemFourthClickEvent::class)
-    .filter { widgetId == 5064 && plr.bank.isOpen }
-    .then { deposit(this) }
+        .filter { widgetId == 5064 && plr.bank.isOpen }
+        .then { deposit(this) }
 
 on(WidgetItemFourthClickEvent::class)
-    .filter { widgetId == 5382 && plr.bank.isOpen }
-    .then { withdraw(this) }
+        .filter { widgetId == 5382 && plr.bank.isOpen }
+        .then { withdraw(this) }
 
 /**
  * Withdraw/deposit (x).
  */
 on(WidgetItemFifthClickEvent::class)
-    .filter { widgetId == 5064 && plr.bank.isOpen }
-    .then {
-        plr.interfaces.open(object : AmountInputInterface() {
-            override fun onAmountInput(player: Player, value: Int) = deposit(this@then, value)
-        })
-    }
+        .filter { widgetId == 5064 && plr.bank.isOpen }
+        .then {
+            plr.interfaces.open(object : AmountInputInterface() {
+                override fun onAmountInput(player: Player, value: Int) = deposit(this@then, value)
+            })
+        }
 
 on(WidgetItemFifthClickEvent::class)
-    .filter { widgetId == 5382 && plr.bank.isOpen }
-    .then {
-        plr.interfaces.open(object : AmountInputInterface() {
-            override fun onAmountInput(player: Player, value: Int) = withdraw(this@then, value)
-        })
-    }
+        .filter { widgetId == 5382 && plr.bank.isOpen }
+        .then {
+            plr.interfaces.open(object : AmountInputInterface() {
+                override fun onAmountInput(player: Player, value: Int) = withdraw(this@then, value)
+            })
+        }

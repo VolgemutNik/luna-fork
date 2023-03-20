@@ -189,7 +189,7 @@ public final class PlayerAppearance {
     /**
      * Determines if {@code value} is a valid color for body part {@code id}.
      *
-     * @param id The body part identifier.
+     * @param id    The body part identifier.
      * @param value The color value.
      * @return {@code true} if {@code value} is a valid color for body part {@code id}.
      */
@@ -202,9 +202,9 @@ public final class PlayerAppearance {
      * Determines if {@code value} is a valid model for {@code gender} and body part
      * {@code model}.
      *
-     * @param model The body part identifier.
+     * @param model  The body part identifier.
      * @param gender The gender value.
-     * @param value The model value.
+     * @param value  The model value.
      * @return {@code true} if {@code value} is a valid model for {@code gender} and body part
      * {@code model}.
      */
@@ -218,9 +218,9 @@ public final class PlayerAppearance {
      * {@link #isGenderValid(int)}, {@link #isColorValid(int, int)}, or {@link #isColorValid(int, int)}
      * methods.
      *
-     * @param index The index.
+     * @param index  The index.
      * @param gender The gender value.
-     * @param value The value.
+     * @param value  The value.
      * @return {@code true} if the values are valid.
      */
     public static boolean isAnyValid(int index, int gender, int value) {

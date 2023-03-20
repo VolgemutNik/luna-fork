@@ -5,7 +5,7 @@ import api.bootstrap.plugin
 plugin {
     name = "Herblore"
     description =
-        """
+            """
         A plugin that enables the Herblore skill. This includes
         -> Grinding all Herblore ingredients with a pestle & mortar
         -> Identifying all herbs

@@ -7,13 +7,13 @@ import io.luna.game.model.item.Item
  */
 enum class Ingredient(val id: Int, val newId: Int) {
     CHOCOLATE_DUST(id = 1973,
-                   newId = 1975),
+            newId = 1975),
     DRAGON_SCALE_DUST(id = 243,
-                      newId = 241),
+            newId = 241),
     CRUSHED_NEST(id = 5075,
-                 newId = 6693),
+            newId = 6693),
     UNICORN_HORN_DUST(id = 237,
-                      newId = 235);
+            newId = 235);
 
     companion object {
 

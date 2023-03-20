@@ -19,10 +19,10 @@ object SandResource : Resource() {
     }
 
     override fun getFilled(empty: Int): Int? =
-        when (empty) {
-            1925 -> 1783 // Empty bucket -> Bucket of sand
-            else -> null
-        }
+            when (empty) {
+                1925 -> 1783 // Empty bucket -> Bucket of sand
+                else -> null
+            }
 
     override fun onFill(plr: Player) = plr.animation(Animation(832))
 }

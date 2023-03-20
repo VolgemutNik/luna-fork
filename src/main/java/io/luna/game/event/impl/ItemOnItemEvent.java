@@ -44,12 +44,12 @@ public final class ItemOnItemEvent extends PlayerEvent {
     /**
      * Creates a new {@link ItemOnItemEvent}.
      *
-     * @param player The player.
-     * @param usedId The used item identifier.
-     * @param targetId The target item identifier.
-     * @param usedIndex The used item index.
-     * @param targetIndex The target item index.
-     * @param usedInterfaceId The used interface identifier.
+     * @param player            The player.
+     * @param usedId            The used item identifier.
+     * @param targetId          The target item identifier.
+     * @param usedIndex         The used item index.
+     * @param targetIndex       The target item index.
+     * @param usedInterfaceId   The used interface identifier.
      * @param targetInterfaceId The target interface identifier.
      */
     public ItemOnItemEvent(Player player, int usedId, int targetId, int usedIndex, int targetIndex,

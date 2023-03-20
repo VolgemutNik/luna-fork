@@ -55,8 +55,8 @@ public final class NpcClickMessageReader extends GameMessageReader {
      * Handles any npc click index.
      *
      * @param player The player.
-     * @param index The npc index.
-     * @param evt The interaction event.
+     * @param index  The npc index.
+     * @param evt    The interaction event.
      */
     private void handleClick(Player player, int index, BiFunction<Player, Npc, NpcClickEvent> evt) {
         World world = player.getWorld();
@@ -75,7 +75,7 @@ public final class NpcClickMessageReader extends GameMessageReader {
      * Click the first index of an npc.
      *
      * @param player The player.
-     * @param msg The buffer to read from.
+     * @param msg    The buffer to read from.
      */
     private void firstIndex(Player player, ByteMessage msg) {
         int index = msg.getShort(ByteOrder.LITTLE);
@@ -86,7 +86,7 @@ public final class NpcClickMessageReader extends GameMessageReader {
      * Click the second index of an npc.
      *
      * @param player The player.
-     * @param msg The buffer to read from.
+     * @param msg    The buffer to read from.
      */
     private void secondIndex(Player player, ByteMessage msg) {
         int index = msg.getShort(ValueType.ADD, ByteOrder.LITTLE);
@@ -97,7 +97,7 @@ public final class NpcClickMessageReader extends GameMessageReader {
      * Click the third index of an npc.
      *
      * @param player The player.
-     * @param msg The buffer to read from.
+     * @param msg    The buffer to read from.
      */
     private void thirdIndex(Player player, ByteMessage msg) {
         int index = msg.getShort(ValueType.ADD);
@@ -108,7 +108,7 @@ public final class NpcClickMessageReader extends GameMessageReader {
      * Click the fourth index of an npc.
      *
      * @param player The player.
-     * @param msg The buffer to read from.
+     * @param msg    The buffer to read from.
      */
     private void fourthIndex(Player player, ByteMessage msg) {
         int index = msg.getShort(false);
@@ -119,7 +119,7 @@ public final class NpcClickMessageReader extends GameMessageReader {
      * Click the fifth index of an npc.
      *
      * @param player The player.
-     * @param msg The buffer to read from.
+     * @param msg    The buffer to read from.
      */
     private void fifthIndex(Player player, ByteMessage msg) {
         int index = msg.getShort(false, ByteOrder.LITTLE);

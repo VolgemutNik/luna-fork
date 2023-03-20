@@ -94,7 +94,7 @@ public class NpcClickEvent extends PlayerEvent {
      * Creates a new {@link NpcClickEvent}.
      *
      * @param player The player.
-     * @param npc The non-player character.
+     * @param npc    The non-player character.
      */
     private NpcClickEvent(Player player, Npc npc) {
         super(player);

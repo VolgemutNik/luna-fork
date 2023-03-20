@@ -141,7 +141,7 @@ public final class Position {
      * @return The translated position.
      */
     public Position translate(int amountX, int amountY, int amountZ) {
-        if(amountX == 0 && amountY == 0 && amountZ == 0) {
+        if (amountX == 0 && amountY == 0 && amountZ == 0) {
             return this;
         }
         return new Position(x + amountX, y + amountY, z + amountZ);

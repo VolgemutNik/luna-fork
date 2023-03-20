@@ -49,13 +49,13 @@ public class GameObject extends StationaryEntity {
     /**
      * Creates a new {@link GameObject} that can be either static or dynamic.
      *
-     * @param context The context instance.
-     * @param id The identifier.
-     * @param position The position.
+     * @param context    The context instance.
+     * @param id         The identifier.
+     * @param position   The position.
      * @param objectType The type.
-     * @param direction The direction.
-     * @param player The player to update for.
-     * @param dynamic If this object is dynamic.
+     * @param direction  The direction.
+     * @param player     The player to update for.
+     * @param dynamic    If this object is dynamic.
      */
     public GameObject(LunaContext context, int id, Position position, ObjectType objectType, ObjectDirection direction, Optional<Player> player, boolean dynamic) {
         super(context, position, EntityType.OBJECT, player);
@@ -69,12 +69,12 @@ public class GameObject extends StationaryEntity {
     /**
      * Creates a new dynamic {@link GameObject}.
      *
-     * @param context The context instance.
-     * @param id The identifier.
-     * @param position The position.
+     * @param context    The context instance.
+     * @param id         The identifier.
+     * @param position   The position.
      * @param objectType The type.
-     * @param direction The direction.
-     * @param player The player to update for.
+     * @param direction  The direction.
+     * @param player     The player to update for.
      */
     public GameObject(LunaContext context, int id, Position position, ObjectType objectType, ObjectDirection direction, Optional<Player> player) {
         this(context, id, position, objectType, direction, player, true);

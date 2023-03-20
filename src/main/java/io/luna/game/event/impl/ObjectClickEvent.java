@@ -63,7 +63,7 @@ public class ObjectClickEvent extends PlayerEvent {
     /**
      * Creates a new {@link ObjectClickEvent}.
      *
-     * @param player The player.
+     * @param player     The player.
      * @param gameObject The clicked object.
      */
     private ObjectClickEvent(Player player, GameObject gameObject) {

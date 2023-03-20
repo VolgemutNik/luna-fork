@@ -11,21 +11,21 @@ enum class Battlestaff(val staff: Int,
                        val exp: Double) {
 
     WATER(staff = 1395,
-          level = 54,
-          orb = 571,
-          exp = 100.0),
+            level = 54,
+            orb = 571,
+            exp = 100.0),
     EARTH(staff = 1399,
-          level = 58,
-          orb = 575,
-          exp = 112.5),
+            level = 58,
+            orb = 575,
+            exp = 112.5),
     FIRE(staff = 1393,
-         level = 62,
-         orb = 569,
-         exp = 125.0),
+            level = 62,
+            orb = 569,
+            exp = 125.0),
     AIR(staff = 1397,
-        level = 66,
-        orb = 573,
-        exp = 137.5);
+            level = 66,
+            orb = 573,
+            exp = 137.5);
 
     companion object {
 

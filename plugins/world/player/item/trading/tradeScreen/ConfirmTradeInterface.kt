@@ -116,9 +116,9 @@ class ConfirmTradeInterface(val offer: OfferTradeInterface) : InventoryOverlayIn
             if (item.itemDef.isStackable) {
                 val amountText = computeAmountText(item.amount)
                 text.append(' ')
-                    .append('x')
-                    .append(' ')
-                    .append(amountText)
+                        .append('x')
+                        .append(' ')
+                        .append(amountText)
             }
         }
         return text.toString()
@@ -132,22 +132,24 @@ class ConfirmTradeInterface(val offer: OfferTradeInterface) : InventoryOverlayIn
         return when {
             amount in 1_000 until 1_000_000 -> {
                 sb.append("@cya@")
-                    .append(amount / 1_000)
-                    .append("K @whi@")
-                    .append('(')
-                    .append(FORMATTER.format(amount))
-                    .append(')')
-                    .toString()
+                        .append(amount / 1_000)
+                        .append("K @whi@")
+                        .append('(')
+                        .append(FORMATTER.format(amount))
+                        .append(')')
+                        .toString()
             }
+
             amount >= 1_000_000 -> {
                 sb.append("@gre@")
-                    .append(amount / 1_000_000)
-                    .append(' ')
-                    .append("million @whi@")
-                    .append('(')
-                    .append(FORMATTER.format(amount))
-                    .append(')').toString()
+                        .append(amount / 1_000_000)
+                        .append(' ')
+                        .append("million @whi@")
+                        .append('(')
+                        .append(FORMATTER.format(amount))
+                        .append(')').toString()
             }
+
             else -> sb.append(amount).toString()
         }
     }

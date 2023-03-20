@@ -27,8 +27,8 @@ public final class IndexedItem {
     /**
      * Creates a new {@link IndexedItem}.
      *
-     * @param index The index.
-     * @param id The item identifier.
+     * @param index  The index.
+     * @param id     The item identifier.
      * @param amount The item amount.
      */
     public IndexedItem(int index, int id, int amount) {
@@ -41,7 +41,7 @@ public final class IndexedItem {
      * Creates a new {@link IndexedItem}.
      *
      * @param index The index.
-     * @param item The item.
+     * @param item  The item.
      */
     public IndexedItem(int index, Item item) {
         this(index, item.getId(), item.getAmount());
@@ -63,7 +63,7 @@ public final class IndexedItem {
 
     @Override
     public int hashCode() {
-         return Objects.hash(index, id, amount);
+        return Objects.hash(index, id, amount);
     }
 
     /**

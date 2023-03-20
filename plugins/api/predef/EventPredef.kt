@@ -27,10 +27,10 @@ private typealias EventAction<E> = E.() -> Unit
 class CommandKey(val name: String, val rights: PlayerRights) {
     override fun hashCode() = Objects.hash(name)
     override fun equals(other: Any?) =
-        when (other) {
-            is CommandKey -> name == other.name
-            else -> false
-        }
+            when (other) {
+                is CommandKey -> name == other.name
+                else -> false
+            }
 }
 
 /**
@@ -54,59 +54,59 @@ fun useItem(id: Int) = InterceptUseItem(id)
  * The [ButtonClickEvent] matcher function.
  */
 fun button(id: Int, action: EventAction<ButtonClickEvent>) =
-    Matcher.get<ButtonClickEvent, Int>().set(id, action)
+        Matcher.get<ButtonClickEvent, Int>().set(id, action)
 
 
 /** The [NpcFirstClickEvent] matcher function.*/
 fun npc1(id: Int, action: EventAction<NpcFirstClickEvent>) =
-    Matcher.get<NpcFirstClickEvent, Int>().set(id, action)
+        Matcher.get<NpcFirstClickEvent, Int>().set(id, action)
 
 /** The [NpcSecondClickEvent] matcher function.*/
 fun npc2(id: Int, action: EventAction<NpcSecondClickEvent>) =
-    Matcher.get<NpcSecondClickEvent, Int>().set(id, action)
+        Matcher.get<NpcSecondClickEvent, Int>().set(id, action)
 
 /** The [NpcThirdClickEvent] matcher function.*/
 fun npc3(id: Int, action: EventAction<NpcThirdClickEvent>) =
-    Matcher.get<NpcThirdClickEvent, Int>().set(id, action)
+        Matcher.get<NpcThirdClickEvent, Int>().set(id, action)
 
 /** The [NpcFourthClickEvent] matcher function.*/
 fun npc4(id: Int, action: EventAction<NpcFourthClickEvent>) =
-    Matcher.get<NpcFourthClickEvent, Int>().set(id, action)
+        Matcher.get<NpcFourthClickEvent, Int>().set(id, action)
 
 /** The [NpcFifthClickEvent] matcher function.*/
 fun npc5(id: Int, action: EventAction<NpcFifthClickEvent>) =
-    Matcher.get<NpcFifthClickEvent, Int>().set(id, action)
+        Matcher.get<NpcFifthClickEvent, Int>().set(id, action)
 
 
 /** The [ItemFirstClickEvent] matcher function.*/
 fun item1(id: Int, action: EventAction<ItemFirstClickEvent>) =
-    Matcher.get<ItemFirstClickEvent, Int>().set(id, action)
+        Matcher.get<ItemFirstClickEvent, Int>().set(id, action)
 
 /** The [ItemSecondClickEvent] matcher function.*/
 fun item2(id: Int, action: EventAction<ItemSecondClickEvent>) =
-    Matcher.get<ItemSecondClickEvent, Int>().set(id, action)
+        Matcher.get<ItemSecondClickEvent, Int>().set(id, action)
 
 /** The [ItemThirdClickEvent] matcher function.*/
 fun item3(id: Int, action: EventAction<ItemThirdClickEvent>) =
-    Matcher.get<ItemThirdClickEvent, Int>().set(id, action)
+        Matcher.get<ItemThirdClickEvent, Int>().set(id, action)
 
 /** The [ItemFourthClickEvent] matcher function.*/
 fun item4(id: Int, action: EventAction<ItemFourthClickEvent>) =
-    Matcher.get<ItemFourthClickEvent, Int>().set(id, action)
+        Matcher.get<ItemFourthClickEvent, Int>().set(id, action)
 
 /** The [ItemFifthClickEvent] matcher function.*/
 fun item5(id: Int, action: EventAction<ItemFifthClickEvent>) =
-    Matcher.get<ItemFifthClickEvent, Int>().set(id, action)
+        Matcher.get<ItemFifthClickEvent, Int>().set(id, action)
 
 
 /** The [ObjectFirstClickEvent] matcher function.*/
 fun object1(id: Int, action: EventAction<ObjectFirstClickEvent>) =
-    Matcher.get<ObjectFirstClickEvent, Int>().set(id, action)
+        Matcher.get<ObjectFirstClickEvent, Int>().set(id, action)
 
 /** The [ObjectSecondClickEvent] matcher function.*/
 fun object2(id: Int, action: EventAction<ObjectSecondClickEvent>) =
-    Matcher.get<ObjectSecondClickEvent, Int>().set(id, action)
+        Matcher.get<ObjectSecondClickEvent, Int>().set(id, action)
 
 /** The [ObjectThirdClickEvent] matcher function.*/
 fun object3(id: Int, action: EventAction<ObjectThirdClickEvent>) =
-    Matcher.get<ObjectThirdClickEvent, Int>().set(id, action)
+        Matcher.get<ObjectThirdClickEvent, Int>().set(id, action)

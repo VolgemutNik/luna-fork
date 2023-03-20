@@ -69,7 +69,7 @@ public abstract class EntityList<E extends StationaryEntity> implements Iterable
      * Creates a new {@link EntityList}.
      *
      * @param world The world.
-     * @param type The type of the entities.
+     * @param type  The type of the entities.
      */
     public EntityList(World world, EntityType type) {
         this.world = world;
@@ -133,7 +133,7 @@ public abstract class EntityList<E extends StationaryEntity> implements Iterable
      * Unregisters all entities on {@code position} that match {@code filter}.
      *
      * @param position The position to unregister entities on.
-     * @param test The filter to apply.
+     * @param test     The filter to apply.
      * @return {@code true} if at least one entity was unregistered.
      */
     public final boolean removeFromPosition(Position position, Predicate<E> test) {

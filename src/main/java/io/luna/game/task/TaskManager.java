@@ -80,7 +80,7 @@ public final class TaskManager {
      * Applies {@code action} to every task that has {@code attachment} as an attachment.
      *
      * @param attachment The attachment.
-     * @param action The action.
+     * @param action     The action.
      */
     public void forEachAttachment(Object attachment, Consumer<Task> action) {
         for (Task task : pending) {

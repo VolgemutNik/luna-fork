@@ -27,23 +27,24 @@ class CutLogAction(plr: Player,
 
     override fun add(): List<Item> {
         val unstrungItem =
-            when (bow) {
-                Bow.ARROW_SHAFT -> Item(bow.unstrung, Arrow.SET_AMOUNT)
-                else -> Item(bow.unstrung)
-            }
+                when (bow) {
+                    Bow.ARROW_SHAFT -> Item(bow.unstrung, Arrow.SET_AMOUNT)
+                    else -> Item(bow.unstrung)
+                }
         return listOf(unstrungItem)
     }
 
     override fun remove() = listOf(Item(log))
 
     override fun executeIf(start: Boolean) =
-        when {
-            mob.fletching.level < bow.level -> {
-                mob.sendMessage("You need a Fletching level of ${bow.level} to cut this.")
-                false
+            when {
+                mob.fletching.level < bow.level -> {
+                    mob.sendMessage("You need a Fletching level of ${bow.level} to cut this.")
+                    false
+                }
+
+                else -> true
             }
-            else -> true
-        }
 
 
     override fun execute() {
@@ -55,8 +56,8 @@ class CutLogAction(plr: Player,
     }
 
     override fun ignoreIf(other: Action<*>) =
-        when (other) {
-            is CutLogAction -> log == other.log && bow == other.bow
-            else -> false
-        }
+            when (other) {
+                is CutLogAction -> log == other.log && bow == other.bow
+                else -> false
+            }
 }

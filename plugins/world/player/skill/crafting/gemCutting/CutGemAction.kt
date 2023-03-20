@@ -15,13 +15,14 @@ class CutGemAction(val plr: Player, val gem: Gem, amount: Int) : InventoryAction
     override fun add() = listOf(gem.cutItem)
 
     override fun executeIf(start: Boolean): Boolean =
-        when {
-            mob.crafting.level < gem.level -> {
-                plr.sendMessage("You need a Crafting level of ${gem.level} to cut this.")
-                false
+            when {
+                mob.crafting.level < gem.level -> {
+                    plr.sendMessage("You need a Crafting level of ${gem.level} to cut this.")
+                    false
+                }
+
+                else -> true
             }
-            else -> true
-        }
 
     override fun execute() {
         plr.animation(gem.animation)
@@ -31,8 +32,8 @@ class CutGemAction(val plr: Player, val gem: Gem, amount: Int) : InventoryAction
     }
 
     override fun ignoreIf(other: Action<*>?): Boolean =
-        when (other) {
-            is CutGemAction -> gem == other.gem
-            else -> false
-        }
+            when (other) {
+                is CutGemAction -> gem == other.gem
+                else -> false
+            }
 }

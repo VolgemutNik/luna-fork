@@ -40,12 +40,12 @@ public final class ItemOnItemMessageReader extends GameMessageReader {
     /**
      * Validates the read data.
      *
-     * @param player The player.
-     * @param usedId The used item identifier.
-     * @param targetId The target item identifier.
-     * @param usedIndex The used item index.
-     * @param targetIndex The target item index.
-     * @param usedInterfaceId The used interface identifier.
+     * @param player            The player.
+     * @param usedId            The used item identifier.
+     * @param targetId          The target item identifier.
+     * @param usedIndex         The used item index.
+     * @param targetIndex       The target item index.
+     * @param usedInterfaceId   The used interface identifier.
      * @param targetInterfaceId The target interface identifier.
      * @return {@code true} if the decoded data is valid.
      */

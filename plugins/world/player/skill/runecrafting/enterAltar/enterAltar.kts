@@ -70,11 +70,11 @@ on(ObjectFirstClickEvent::class) {
  * Intercept event for exiting through altar portals.
  */
 on(ObjectFirstClickEvent::class)
-    .filter { objectDef(id).name == "Portal" }
-    .then {
-        val altar = Altar.PORTAL_TO_ALTAR[id]
-        if (altar != null) {
-            portalExit(plr, altar)
+        .filter { objectDef(id).name == "Portal" }
+        .then {
+            val altar = Altar.PORTAL_TO_ALTAR[id]
+            if (altar != null) {
+                portalExit(plr, altar)
+            }
         }
-    }
 

@@ -27,7 +27,7 @@ public final class PlayerDialogueInterface extends DialogueInterface {
      * Creates a new {@link DialogueInterface}.
      *
      * @param expression The expression.
-     * @param text The text.
+     * @param text       The text.
      */
     public PlayerDialogueInterface(Expression expression, String... text) {
         super(DialogueUtils.playerDialogue(text.length));

@@ -17,8 +17,8 @@ class LootTableItem(val id: Int, val amount: IntRange, val chance: Rational) {
          * Computes the [id] for an item with [name].
          */
         private fun computeId(name: String, noted: Boolean) =
-            ItemDefinition.ALL.lookup { it.name == name && it.isNoted == noted }
-                .orElseThrow { NoSuchElementException("Item with $name not found.") }.id
+                ItemDefinition.ALL.lookup { it.name == name && it.isNoted == noted }
+                        .orElseThrow { NoSuchElementException("Item with $name not found.") }.id
     }
 
     /**

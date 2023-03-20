@@ -79,17 +79,17 @@ public final class ItemDefinition implements Definition {
     /**
      * Creates a new {@link ItemDefinition}.
      *
-     * @param id The identifier.
-     * @param name The name.
-     * @param stackable If the item is stackable.
-     * @param value The base value.
-     * @param notedId The noted identifier.
-     * @param unnotedId The unnoted identifier.
-     * @param membersOnly If this item is members only.
-     * @param weight The weight.
-     * @param tradeable If this item can be traded.
+     * @param id               The identifier.
+     * @param name             The name.
+     * @param stackable        If the item is stackable.
+     * @param value            The base value.
+     * @param notedId          The noted identifier.
+     * @param unnotedId        The unnoted identifier.
+     * @param membersOnly      If this item is members only.
+     * @param weight           The weight.
+     * @param tradeable        If this item can be traded.
      * @param inventoryActions A list of inventory actions.
-     * @param groundActions A list of ground actions.
+     * @param groundActions    A list of ground actions.
      */
     public ItemDefinition(int id, String name, boolean stackable, int value, int notedId, int unnotedId,
                           boolean membersOnly, double weight, boolean tradeable, String[] inventoryActions,
@@ -120,7 +120,7 @@ public final class ItemDefinition implements Definition {
     /**
      * Determines if the inventory action at {@code index} is equal to {@code action}.
      *
-     * @param index The action index.
+     * @param index  The action index.
      * @param action The action to compare.
      * @return {@code true} if the actions are equal.
      */
@@ -131,7 +131,7 @@ public final class ItemDefinition implements Definition {
     /**
      * Determines if the ground action at {@code index} is equal to {@code action}.
      *
-     * @param index The action index.
+     * @param index  The action index.
      * @param action The action to compare.
      * @return {@code true} if the actions are equal.
      */

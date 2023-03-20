@@ -28,7 +28,7 @@ public final class ExecutorUtils {
     /**
      * Create a new thread pool with {@code threads} workers.
      *
-     * @param name The naming scheme for the workers in the pool.
+     * @param name    The naming scheme for the workers in the pool.
      * @param threads The amount of workers in the pool.
      * @return The thread pool.
      */
@@ -61,6 +61,7 @@ public final class ExecutorUtils {
     public static ThreadFactory threadFactory(String nameFormat) {
         return new ThreadFactoryBuilder().setNameFormat(nameFormat).build();
     }
+
     /**
      * Prevent instantiation.
      */

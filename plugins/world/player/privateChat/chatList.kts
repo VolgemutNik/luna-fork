@@ -42,6 +42,7 @@ fun addFriend(plr: Player, name: Long) {
             val online = world.getPlayer(name).isPresent
             plr.queue(UpdateFriendsListMessageWriter(name, online))
         }
+
         else -> plr.sendMessage("They are already on your friends list.")
     }
 }

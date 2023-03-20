@@ -15,7 +15,7 @@ fun grind(msg: ItemOnItemEvent, id: Int) {
         val interfaces = msg.plr.interfaces
         interfaces.open(object : MakeItemDialogueInterface(ingredient.newId) {
             override fun makeItem(plr: Player, id: Int, index: Int, forAmount: Int) =
-                plr.submitAction(GrindAction(plr, ingredient, forAmount))
+                    plr.submitAction(GrindAction(plr, ingredient, forAmount))
         })
     }
 }

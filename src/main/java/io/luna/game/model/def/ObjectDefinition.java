@@ -72,16 +72,16 @@ public final class ObjectDefinition implements Definition {
     /**
      * Creates a new {@link ObjectDefinition}.
      *
-     * @param id The identifier.
-     * @param name The name.
-     * @param examine The examine text.
-     * @param length The length.
-     * @param width The width.
+     * @param id             The identifier.
+     * @param name           The name.
+     * @param examine        The examine text.
+     * @param length         The length.
+     * @param width          The width.
      * @param isImpenetrable If the object is impenetrable.
-     * @param isInteractive If the object is interactive.
-     * @param isObstructive If the object is obstructive.
-     * @param isSolid If it is solid.
-     * @param actions A list of actions.
+     * @param isInteractive  If the object is interactive.
+     * @param isObstructive  If the object is obstructive.
+     * @param isSolid        If it is solid.
+     * @param actions        A list of actions.
      */
     public ObjectDefinition(int id, String name, String examine, int length, int width, boolean isImpenetrable,
                             boolean isInteractive, boolean isObstructive, boolean isSolid, String[] actions) {
@@ -100,12 +100,12 @@ public final class ObjectDefinition implements Definition {
     /**
      * Determines if the object action at {@code index} is equal to {@code action}.
      *
-     * @param index The action index.
+     * @param index  The action index.
      * @param action The action to compare.
      * @return {@code true} if the actions are equal.
      */
     public boolean hasAction(int index, String action) {
-        if(index < 0 || index >= actions.size()) {
+        if (index < 0 || index >= actions.size()) {
             return false;
         }
         return action.equals(actions.get(index));
